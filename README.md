@@ -1,16 +1,27 @@
-### Hi there 👋
+# About Mark 👋
 
-<!--
-**Mark-A-Dean/Mark-A-Dean** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## The Biz Background
+I joined the **Department of Veterans Affairs** in 2006 through the TCF Internship program, graduating in 2009, and joining the VISN 17 Office staff. I transitioned to the **Business Intelligence Service Line** (BISL) in June 2012, starting with the CDW Architect Team and then moving into the new CDW Customer Engagement team in 2021. Before public service, I was a R&D chemist with an automotive company and have worked in industrial warehouses (inventory control). My degree is in Biology with advanced studies in Vertebrate Zoology, Ecology, Biogeography, and taxonomy.
 
-Here are some ideas to get you started:
+## Interests
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- Trail running
+- Reading
+- Data wrangling & interoperability
+- Science!
+- Programming
+  - PowerShell, XML, Liquid, regex, T-SQL
+- Everton FC, FC Dallas, Seattle Kraken
+
+> I would choose XSLT or Liquid to be my deserted island programming language. PowerShell is a nice polyglot that would be Huttese if XML were Galactic Basic.
+> _Regex_? I list that as a programming language that has its syntactical dialects.
+
+## Whazits
+- 🔭 I’m currently working on _The BISL Resource Inventory_.
+- 🌱 I’m currently brushing up on Lean Six Sigma - it's been a few decades.
+  - I use Kanban and Kaizen (DMAIC) daily, but it's muscle memory; I need the info to help teach others. 
+- 💬 Ask me about PowerShell, GitHub, running, writing, reporting, Texas, T-SQL; but I'll growl about SharePoint. 
+- 📫 How to reach me:
+  - MS Teams
+  - mark.dean2@va.gov
+- ⚡ Fun facts: I worked in the _Decaying Flesh Lab_ and was a bouncer during college, although, neither job wasn't so fun.
