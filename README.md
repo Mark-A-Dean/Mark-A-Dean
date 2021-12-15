@@ -5,13 +5,17 @@ I joined the **Department of Veterans Affairs** in 2006 through the TCF Internsh
 
 ## Interests
 
+- Data wrangling & interoperability
 - Trail running
 - Reading
-- Data wrangling & interoperability
 - Science!
 - Programming
-  - PowerShell, XML, Liquid, regex, T-SQL
-- Everton FC, FC Dallas, Seattle Kraken
+  - PowerShell
+  - XML
+  - Liquid
+  - regex
+  - T-SQL
+
 
 > I would choose XSLT or Liquid to be my deserted island programming language. PowerShell is a nice polyglot that would be Huttese if XML were Galactic Basic.
 > _Regex_? To me, it's a unique language with syntactical dialects.
@@ -24,4 +28,5 @@ I joined the **Department of Veterans Affairs** in 2006 through the TCF Internsh
 - 📫 How to reach me:
   - MS Teams
   - mark.dean2@va.gov
+  - cdwprojectsupport@va.gov c/o Mark Dean
 - ⚡ Fun facts: I worked in the _Decaying Flesh Lab_ and was a bouncer during college, although, neither job wasn't so fun.
