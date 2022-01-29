@@ -19,7 +19,7 @@ The term _data_ is used in place of "unprocessed, potentially informative object
 
 ## Diagram
 
-![bisl-resource-inventory-use-case-diagram](https://github.com/department-of-veterans-affairs/CDWNG-CustomerEngagement-Inventory/blob/master/images/bisl_resource_inventory_use_case_diagram.jpg "BISL Resource Inventory UML Use Case Diagram")
+![bisl-resource-inventory-use-case-diagram](https://github.com/Mark-A-Dean/Mark-A-Dean/blob/main/portfolio/images/bisl_resource_inventory_use_case_diagram.jpg "BISL Resource Inventory UML Use Case Diagram")
 
 ### Elements
 
