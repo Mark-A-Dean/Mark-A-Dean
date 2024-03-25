@@ -20,9 +20,8 @@ Version: "1.0.1"
 Columns:
 ``` json
 [
-    {"Name":"$edge_id","Description":"Unique identifier for the edge in the database."},
-    {"Name":"$from_id","Description":"Stores the $node_id of the node, from where the edge originates."},
-    {"Name":"$to_id","Description":"Stores the $node_id of the node, at which the edge terminates."}
+    {"Name":"HashID","Description":"Hexadecimal representation of attribute values that uniquely identifies the row instance separately or in combination with other elements."},
+    {"Name":"RowModifiedDateTime","Description":"The date and time in the UTC time zone when the row was last modified."}
 ]
 ```
 Parameters:
