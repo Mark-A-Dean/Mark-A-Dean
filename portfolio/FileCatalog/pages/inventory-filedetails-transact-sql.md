@@ -10,7 +10,7 @@ Returns a row for each file processed during an inventory cycle.
 |\_id|int|Row identity value.|
 |Ancestor1|varchar(256)|The recognized first tier of the file directory system hierarchy. Might not be the highest directory in a path.|
 |AssignmentPriority|char(1)|A simplified ranking determined by combinations of AuditRank ranges and the active status of a file.|
-|AuditRank|int|An integer value determined by the relationships of datetime elements, the active status, file extension type, and the detectable presence of a file owner. See [Logic & interpretations](https://github.ec.va.gov/VHA104RO2-Quality-and-Performance/File_Catalog/blob/main/docs/filedetails.filecollection.auditrank.md#logic-and-interpretations).|
+|AuditRank|int|An integer value determined by the relationships of datetime elements, the active status, file extension type, and the detectable presence of a file owner.|
 |BaseName|varchar(255)|The file name without the extension or URI elements.|
 |CreationTimeUtc|datetime2(0)|The date and time when the file was created.|
 |DirectoryName|varchar(500)|The full URI to the immediate directory of the file.|
