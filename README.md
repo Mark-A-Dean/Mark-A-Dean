@@ -20,7 +20,4 @@ Before public service, I was a R&D chemist in the automotive industry, and have 
 - 🌱 I’m brushing up on Lean Six Sigma as it's been a few decades.
   - I use Kanban and Kaizen (DMAIC) daily, but it's muscle memory; I need the info to help teach others. 
 - 💬 Ask me about PowerShell, GitHub, running, writing, reporting, Texas, T-SQL; but I'll growl about SharePoint and Confluence. 
-- 📫 How to reach me:
-  - MS Teams
-  - mark.dean2@va.gov
 - ⚡ Fun facts: I worked in the _Decaying Flesh Lab_ and was a bouncer during college. Although, neither job was as fun as it sounds.
