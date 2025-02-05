@@ -2,7 +2,7 @@
 
 # About Mark 👋
 
-_meh... skip to the end_: [Portfolio](https://github.com/Mark-A-Dean/Mark-A-Dean/tree/main/portfolio)
+👀 _This is where I'm committing the most currently:_ [portfolio/FileCatalog](./portfolio/FileCatalog/README.md).
 
 ## The Biz Background
 I joined the **Department of Veterans Affairs** in 2006 through the TCF Internship program, graduating in 2009, and worked in the VISN 17 Office on the V17 data warehouse until 2012. I transitioned to the **Business Intelligence Service Line** (BISL) that June as a Data Architect in the CDW. In 2021, I moved into BISL's CDW Customer Engagement team and helped it get started before joining the **VHA Business Information Office** Revenue Operations team in April 2022.
