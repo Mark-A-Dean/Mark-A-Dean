@@ -1,0 +1,65 @@
+{
+    "@context": {
+        "vocab": "http://schema.org/",
+        "auditor": "agent",
+        "event_name": "name",
+        "root": "location",
+        "event_date": "endTime",
+        "event_state": "actionStatus",
+        "manifest": "Array"
+    },
+    "ALICE": [
+        {
+            "auditor": "USER_ACCOUNT",
+            "event_name": "exclusion",
+            "root": "\\\\file_server\\directory-A\\Alice",
+            "description": "excluded items",
+            "event_date": "9999-01-01",
+            "event_state": "approved",
+            "manifest": [
+                {
+                    "@type": "directory",
+                    "name": "Customers"
+                },
+                {
+                    "@type": "directory",
+                    "name": "Bicycles"
+                }
+            ]
+        }
+    ],
+    "BOB": [
+        {
+            "auditor": "USER_ACCOUNT",
+            "event_name": "exclusion",
+            "root": "\\\\file_server\\directory-i\\BOB",
+            "description": "excluded items",
+            "event_date": "9999-01-01",
+            "event_state": "approved",
+            "manifest": [
+                {
+                    "@type": "file",
+                    "name": "Acceptance of quote.doc"
+                }
+            ]
+        },
+        {
+            "auditor": "USER_ACCOUNT",
+            "event_name": "exclusion",
+            "root": "\\\\file_server\\directory-i\\directory-j\\directory-k\\BOB",
+            "description": "excluded items",
+            "event_date": "9999-01-15",
+            "event_state": "approved",
+            "manifest": [
+                {
+                    "@type": "file",
+                    "name": "Book1.xlsx"
+                },
+                {
+                    "@type": "directory",
+                    "name": "bin"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Defines the elements of excludedItems.json",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": "object",
+      "properties": {
+        "vocab": {
+          "type": "string",
+          "minLength": 1
+        },
+        "auditor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_date": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_state": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manifest": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "vocab",
+        "auditor",
+        "event_name",
+        "root",
+        "event_date",
+        "event_state",
+        "manifest"
+      ]
+    }
+  }
+}
