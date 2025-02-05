@@ -1,3 +1,5 @@
+🛠️ - _I am retooling this repository. As I tend to focus more on content and contexts, things here may appear more arcane rather than they are affixed with the clicky slick bits._
+
 # About Mark 👋
 
 ## The Biz Background
