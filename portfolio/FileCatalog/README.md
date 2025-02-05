@@ -2,6 +2,10 @@
 
 The purpose of the File Catalog programme[^1] is to query a file system and ascribe files with attributes related to auditing programs and inventory cycles.
 
+## Disclaimer
+
+The contents of this directory are for educational purposes only. The code provided is sanitized, and some items may raise errors and exceptions when used on a _as-is_ basis.
+
 ## Description
 The File Catalog programme creates and manages the actions and items associated with the systematic arrangement of files.
 
@@ -17,7 +21,7 @@ The File Catalog programme creates and manages the actions and items associated 
 ## Components
 * Documentation
 * * Reference materials
-* Modules and scripts
+* [Modules](https://github.com/Mark-A-Dean/Mark-A-Dean/tree/main/portfolio/FileCatalog/powershell/modules) and scripts
 * * PowerShell modules; but may include any "bundled program feature" intended for file-copy (versus executables, &c.).
   * _Scripts_: items copied as standalone definitions into an existing locale. Example: PowerQuery extensions.
 * Supportive elements
