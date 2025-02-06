@@ -10,7 +10,6 @@ Before public service, I was a R&D chemist in the automotive industry, and have 
 ## Notable stuff here
 |Item|Function|For|Format|
 |:--|:--|:--|:--|
-|[Recast Portfolio](./projects/8)|Information management|Repository|Kanban|
 |[File Catalog](./portfolio/FileCatalog/README.md)|Documentation|Programme [^1]|.md|
 |[FileDetails](./portfolio/FileCatalog/powershell/modules/FileDetails)|Resusable custom functions|Module|PowerShell|
 |[DOEx.vw_FileDetails (Transact-SQL)](./portfolio/FileCatalog/pages/doex-vw_filedetails-transact-sql.md)|Indexed TSQL View|Full-text enabled for fuzzy lookups|.sql|
