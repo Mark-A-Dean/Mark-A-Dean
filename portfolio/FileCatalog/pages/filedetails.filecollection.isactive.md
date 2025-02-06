@@ -4,9 +4,9 @@
 
 Namespace: FileDetails  
 Module: FileDetails  
-Source: Get-FileDetails.ps1
+Source: [Get-FileDetails.ps1](./get-filedetails.md) 
 
-A Boolean value based on the relationship of the LastAccess or LastWrite dates with the Creation date and three years prior to the current date. This value is set by the File.SetIsActive File Class method.
+A Boolean value based on the relationship of the _LastAccess_ or _LastWrite_ dates with the _Creation_ date and three years prior to the current date. This value is set by the [File Class](./filedetails.file.md) [File.SetIsActive](./filedetails.file.setisactive.md) method.
 
 PowerShell
 ***
@@ -35,8 +35,9 @@ Although rare, file system administrations can affect the metadata. For example,
 
 ## See also
 
-- File.SetIsActive
-- FileCollection Class
+- [File Class](./filedetails.file.md)
+- [File.SetIsActive](./filedetails.file.setisactive.md)
+- [FileCollection Class](./filedetails.filecollection.md)
 
 ## Notes
 [^1]: When one condition is met, then the value of `true` is assigned to the property for the file.
