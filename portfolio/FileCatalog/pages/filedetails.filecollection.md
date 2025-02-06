@@ -3,7 +3,7 @@
 ## Definition
 Namespace: FileDetails  
 Module: FileDetails.psm1  
-Source: Get-FileDetails.ps1
+Source: [Get-FileDetails.ps1](./get-filedetails.md)
 
 Creates a table of in-memory data for a file system's file properties.
 
@@ -80,9 +80,9 @@ FileCollection is a PowerShell object that calls the [.NET DataTable class](http
 
 ## See also
 
-- File Class
-- File.Add(File) Method
-- FileCollection.AuditRank Property
-- FileCollection.IsActive Property
-- Get-FileDetails
-- Inventory.FileDetails (Transact-SQL)
+- [File Class](./filedetails.file.md)
+- [File.Add(File) Method](./filedetails.file.add.md)
+- [FileCollection.AuditRank Property](./filedetails.filecollection.auditrank.md)
+- [FileCollection.IsActive Property](./filedetails.filecollection.isactive.md)
+- [Get-FileDetails](./get-filedetails.md)
+- [Inventory.FileDetails (Transact-SQL)](./inventory-filedetails-transact-sql.md)
