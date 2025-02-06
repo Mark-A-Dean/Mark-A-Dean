@@ -75,8 +75,8 @@ ORDER BY a._id;
 ```
 
 ## See also
-- FileCollection Class
-- Update-BaseTable
+- [FileCollection Class](./filedetails.filecollection.md)
+- [Update-BaseTable](./update-basetable.md)
 
 ## References
 [^1]: [Temporal tables](https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16)
