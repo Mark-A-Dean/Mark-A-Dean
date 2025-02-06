@@ -1,13 +1,13 @@
 # AuditLog Class
 Module: FileDetails  
-Source: Get-AuditLog.ps1
+Source: [Get-AuditLog.ps1](./get-auditlog.md)
 
 ## Description
 
 Represents an in-memory cache of file attributes.
 
 ## Examples
-The following example creates an instance of the AuditLog class for each audit log file (`audit.log`) item found in a collection of directories and subdirectories. The instance is added to a datatable object using the [AuditLog.Add](#) method.
+The following example creates an instance of the AuditLog] class for each audit log file (`audit.log`) item found in a collection of directories and subdirectories. The instance is added to a datatable object using the [AuditLog.Add](./filedetails.auditlog.add.md) method.
 
 PowerShell
 ``` powershell
@@ -36,7 +36,7 @@ PowerShell
 
 ## Constructors
 
-`AuditLog([PSObject])`&ensp;&ensp;&ensp;&ensp;Initializes a new instance of the AuditLog class with a file object taken from `System.IO.DirectoryInfo`.
+`AuditLog([PSObject])`&ensp;&ensp;&ensp;&ensp;Initializes a new instance of the [AuditLog](./filedetails.auditlog.md) class with a file object taken from `System.IO.DirectoryInfo`.
 
 ## Fields
 
@@ -69,6 +69,6 @@ These fields respectively convert the CreationTimeUtc, LastAccessTimeUtc, and La
 
 ## See also
 
-- AuditLog.Add(AuditLog) Method
-- AuditLogCollection Class
-- Get-AuditLog
+- [AuditLog.Add(AuditLog) Method](./filedetails.auditlog.add.md)
+- [AuditLogCollection Class](./filedetails.auditlogcollection.md)
+- [Get-AuditLog](./get-auditlog.md)
