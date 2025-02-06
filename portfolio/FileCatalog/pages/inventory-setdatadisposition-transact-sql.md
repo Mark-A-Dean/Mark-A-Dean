@@ -2,7 +2,7 @@
 
 **Applies to**: :heavy_check_mark: SQL Server
 
-`Inventory.SetDataDisposition` is a scalar-valued function that sets the data disposition for a file object in the Inventory.FileDetails table.
+`Inventory.SetDataDisposition` is a scalar-valued function that sets the data disposition for a file object in the [Inventory.FileDetails](inventory-filedetails-transact-sql.md) table.
 
 ## Syntax
 
@@ -28,8 +28,9 @@ _varchar(20)_
 
 ## Remarks
 
-This function is intended only for use within the `Inventory.ManageFileDetails` stored procedure.
+This scalar function is intended only for use within the [`Inventory.ManageFileDetails`](../tsql/procedures/Inventory.ManageFileDetails.sql) stored procedure.
 
 ## See also
 
-- Inventory.FileDetails (Transact-SQL)
+- [Inventory.FileDetails (Transact-SQL)](./inventory-filedetails-transact-sql.md)
+- [Inventory.ManageFileDetails.sql](../tsql/procedures/Inventory.ManageFileDetails.sql)
