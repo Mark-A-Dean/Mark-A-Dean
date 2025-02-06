@@ -4,9 +4,9 @@
 
 Namespace: FileDetails  
 Module: FileDetails.psm1  
-Source: Get-FileDetails.ps1
+Source: [Get-FileDetails.ps1](./get-filedetails.md)
 
-Sets the IsActive property value by assessing the relationships between three file datetime properties.
+Sets the [IsActive](./filedetails.filecollection.isactive.md) value by assessing the relationships between three file datetime properties.
 
 PowerShell
 ***
@@ -36,7 +36,7 @@ PowerShell
 
 ## Example
 
-The following example shows an abbreviated version of the File Class. The class constructor method `File($p1)` contains a variable _isActive_ that stores the value from the method. This variable sets the `IsActive` property on the current instance of the class and serves as a parameter on other class methods.
+The following example shows an abbreviated version of the [File Class](./filedetails.file.md). The class constructor method `File($p1)` contains a variable _isActive_ that stores the value from the method. This variable sets the `IsActive` property on the current instance of the class and serves as a parameter on other class methods.
 
 PowerShell
 ***
@@ -53,5 +53,6 @@ Class File{
 ## Remarks
 
 ## See also
-- File Class
-- FileCollection.IsActive Property
+- [File Class](./filedetails.file.md)
+- [FileCollection.IsActive Property](./filedetails.filecollection.isactive.md)
+- [Get-Date](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.5)
