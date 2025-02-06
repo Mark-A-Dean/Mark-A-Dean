@@ -18,4 +18,11 @@ section Database;
             _source,Query,null,[EnableFolding=true]
         )
     in
-        Results;
+        Results Metadata.document(
+        false,
+        false,
+        "Mark A. Dean",
+        "Database.ExecuteWithResult sets a database connection and executes a TSQL query.",
+        "Metadata.document",
+        "table"
+    );
