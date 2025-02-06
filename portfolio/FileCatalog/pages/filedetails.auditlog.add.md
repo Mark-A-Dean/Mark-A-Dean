@@ -4,7 +4,7 @@
 
 Namespace: FileDetails  
 Module: FileDetails.psm1  
-Source: Get-AuditLog.ps1
+Source: [Get-AuditLog.ps1](./get-auditlog.md)
 
 Adds an instance of the class to a data table.
 
@@ -17,11 +17,11 @@ Add($q1){Add-AuditLog $q1}
 ## Parameters
 
 `q1`&ensp;&ensp;AuditLog  
-The AuditLog class object to be added to a AuditLogCollection datatable object.
+The AuditLog class object to be added to a [AuditLogCollection](./filedetails.auditlogcollection.md) datatable object.
 
 ## Example
 
-The following example shows how to add an instance of the AuditLog class where the variable `j` stores the current instance of the file metadata properties. `j` is reassigned with a `Select-Object` of itself to ensure the required properties are recorded in the resultant `PSObject`. When the file extension is `.log` a new PSObject, `x`, is created that includes a calculated single property which contains the file contents, `Content`. Lastly, `x` is used to construct a new instance of the `AuditLog` class and that is added to a datatable object with the class's `Add` method.
+The following example shows how to add an instance of the [AuditLog](./filedetails.auditlog.md) class where the variable `j` stores the current instance of the file metadata properties. `j` is reassigned with a `Select-Object` of itself to ensure the required properties are recorded in the resultant `PSObject`. When the file extension is `.log` a new PSObject, `x`, is created that includes a calculated single property which contains the file contents, `Content`. Lastly, `x` is used to construct a new instance of the `AuditLog` class and that is added to a datatable object with the class's `Add` method.
 
 PowerShell  
 ***
@@ -47,8 +47,10 @@ PowerShell
 
 ## Remarks
 
-The method calls the internal function `Add-AuditLog([AuditLog]$data)` in the Get-AuditLog cmdlet.
+The method calls the internal function `Add-AuditLog([AuditLog]$data)` in the [Get-AuditLog](./get-auditlog.md) cmdlet.
 
 ## See also
 
-- AuditLog Class
+- [AuditLog Class](./filedetails.auditlog.md)
+- [AuditLogCollection Class](./filedetails.auditlogcollection.md)
+- [Get-AuditLog](./get-auditlog.md)

@@ -48,7 +48,7 @@ FROM Inventory.AuditLog;
 
 The Inventory.FileDetails table is a temporal (i.e., system-versioned) table. When queried without the `FOR SYSTEM_TIME` clause, rows only in their current status are returned. To create historical returns, like the rows current to a specific date, see [Temporal tables: Queries](https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16#how-do-i-query-temporal-data). 
 
-> The query below uses an `OUTER APPLY` in the same manner as a `LEFT OUTER JOIN`—in fact, it may use the same query plan. However, the APPLY operator showed to have slightly improved Query Time Stats consistently in Azure Data Studio.
+> The query below uses an `OUTER APPLY` in the same manner as a `LEFT OUTER JOIN`—in fact, it may use the same query plan. However, the APPLY operator showed to have slightly improved Query Time Stats consistently in Azure Data Studio at the time of this writing.
 T-SQL
 ***
 ```sql
@@ -66,6 +66,6 @@ ORDER BY a.AssignmentPriority DESC,a.Parent;
 ```
 
 ## See also
-- AuditLog Class
-- Get-AuditLog
-- Update-BaseTable
+- [AuditLog Class](./filedetails.auditlog.md)
+- [Get-AuditLog](./get-auditlog.md)
+- [Update-BaseTable](./update-basetable.md)
