@@ -4,7 +4,7 @@
 
 Namespace: FileDetails  
 Module: FileDetails.psm1  
-Source: Get-FileDetails.ps1
+Source: [Get-FileDetails.ps1](./get-filedetails.md) 
 
 Returns the last node (also _piece_ when used of a `string` value) of a Uniform Resource Identifier (URI) using a Regular Expression (regex) operation[^1].
 
@@ -27,12 +27,12 @@ A URI to be parsed. The URI is the full file path down to a specific directory.
 
 |URI|Type|Description|
 |:--|:--|:--|
-|**Ancestor1**|`[System.IO.FileInfo]`|This path is supplied by the first parameter on the Get-FileDetails.ps1 cmdlet.|
+|**Ancestor1**|`[System.IO.FileInfo]`|This path is supplied by the first parameter on the [Get-FileDetails](./get-filedetails.md) cmdlet.|
 |**Parent**|`string`|Full file path to the immediate directory where the file is located.|
 
 ## Example
 
-The following example shows an abbreviated version of the File Class. The class constructor method `File($p1)` sets two properties: `Ancestor1` and `Parent` by calling the function and passing in URIs for parsing. `Ancestor1` is added into the class object as a custom property.
+The following example shows an abbreviated version of the [File Class](./filedetails.file.md). The class constructor method `File($p1)` sets two properties: `Ancestor1` and `Parent` by calling the function and passing in URIs for parsing. `Ancestor1` is added into the class object as a custom property.
 
 PowerShell
 ***
@@ -65,7 +65,7 @@ Regex options are parameters that control the behavior of a regular expression[^
 
 ## See also
 
-- File Class
+- [File Class](./filedetails.file.md)
 
 ## References
 [^1]: [RegexOptions Enum](https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexoptions?view=net-8.0)
