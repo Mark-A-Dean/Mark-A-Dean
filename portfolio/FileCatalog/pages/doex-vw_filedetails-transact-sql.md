@@ -34,7 +34,7 @@ The visibility of some data sets is limited to securables that a user either own
 
 **DOEx.vw_FileDetails** is a schema-bound database view that carries a clustered index on the `_id` column. SQL Server has supported [indexed view matching](https://learn.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql-table?view=sql-server-ver16#using-noexpand) since SQL 2019; therefore, the `NOEXPAND` query hint does not need to be specified for the SQL Engine to use the view's index. Practitioners should check the query execution plan to ensure that the view's index is being utilized on more complex queries.
 
-The view is sourced to the [Inventory.FileDetails](https://github.com/Mark-A-Dean/Mark-A-Dean/blob/main/portfolio/FileCatalog/pages/inventory-filedetails-transact-sql.md) temporal table[^1] and does not specify a system time constraint. Therefore, only the current row versions are returned.
+The view is sourced to the [Inventory.FileDetails](./inventory-filedetails-transact-sql.md) temporal table[^1] and does not specify a system time constraint. Therefore, only the current row versions are returned.
 
 ## Examples
 
@@ -58,7 +58,7 @@ ORDER BY a.FullName OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY;
 
 Running the following query returns results where either the `Parent` or `BaseName` column value matches a set of criteria.
 
-🔍 The match criteria below needs to be updated to reflect the data stored in the base table.
+🔍 Update the match criteria below to reflect the stored data in the base table.
 
 The match criteria is:
 1. "cpac" occurs with some form of the word "request" **OR**
@@ -81,8 +81,9 @@ WHERE CONTAINS(
 ORDER BY a.CreationTimeUtc DESC;
 ```
 ## See also
-- Common types of full text queries
-- [Inventory.Filedetails (Transact-SQL)](https://github.com/Mark-A-Dean/Mark-A-Dean/blob/main/portfolio/FileCatalog/pages/inventory-filedetails-transact-sql.md)
+- Common types of full text queries: 🚧 _page under construction_
+- [DOEx.vw_FileDetails.sql](../tsql/views/DOEx.vw_FileDetails.sql)
+- [Inventory.FileDetails (Transact-SQL)](./inventory-filedetails-transact-sql.md)
 
 ## References
 [^1]: [Temporal tables](https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16)
