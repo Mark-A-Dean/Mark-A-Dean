@@ -5,7 +5,7 @@ Module: FileDetails.psm1
 
 Opens a Windows form on the host system to display an error message.
 
-> This cmdlet when in the **FileDetails** namespace is intended to only be called and executed automatically by the cmdlet Get-FileDetails.
+> This cmdlet when in the **FileDetails** namespace is intended to only be called and executed automatically by custom cmdlets.
 
 ## Syntax
 
@@ -17,7 +17,7 @@ New-ExceptionWindow -ErrorLog <array>;
 
 ## Example
 
-The following example captures the line number where an exception halts the Get-FileDetails program execution, formats an error message custom to the error, and then passes that as an two-member array into the cmdlet.
+The following example captures the line number where an exception halts the [Get-FileDetails](./get-filedetails.md) program execution, formats an error message custom to the error, and then passes that as an two-member array into the cmdlet.
 
 PowerShell
 ***
@@ -38,7 +38,7 @@ Contains the program name and the message that will appear in the message box wh
 |:--|:--|
 |Type|array|
 |Position|1|
-|Default value|Provided by the Get-FileDetails cmdlet.|
+|Default value|Provided by the wrapping cmdlet.|
 |Required|True|
 
 ## Outputs
@@ -51,4 +51,4 @@ This cmdlet was created to replace log files containing errors.
 
 ## See also
 
-- Get-FileDetails
+- [Get-FileDetails](./get-filedetails.md)
