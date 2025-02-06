@@ -4,7 +4,7 @@
 
 Namespace: FileDetails  
 Module: FileDetails.psm1  
-Source: Get-FileDetails.ps1
+Source: [Get-FileDetails.ps1](./get-filedetails.md) 
 
 Sets the AuditRank property value by assessing the relationships between three file datetime properties, the file extension, and the presence of a file owner.
 
@@ -37,11 +37,11 @@ PowerShell
 The current instance of the file. Provides the values of `CreationTimeUtc`, `LastAccessTimeUtc`, `LastWriteTimeUtc`, and `Extension` to the method.
 
 `p2`&ensp;&ensp;String  
-The file owner provided by the File class method **GetFileOwner**. This value is not a member of the current _File_ instance and must be obtained separately.
+The file owner provided by the [File Class](./filedetails.file.md) [File.GetFileOwner](./filedetails.file.getfileowner.md) method. This value is not a member of the current _File_ instance and must be obtained separately.
 
 ## Example
 
-The following example shows an abbreviated version of the File Class. The class constructor method `File($p1)` contains a variable `_auditRank` that stores the value from the method. This variable sets the `AuditRank` property and serves as a parameter on other class methods.
+The following example shows an abbreviated version of the [File Class](./filedetails.file.md). The class constructor method `File($p1)` contains a variable `_auditRank` that stores the value from the method. This variable sets the `AuditRank` property and serves as a parameter on other class methods.
 
 PowerShell
 ***
@@ -64,7 +64,7 @@ A value assignment is added to the total for each condition that is truthfully m
 - was created within the last 5 years from the most recent inventory date: `5`,
 - there has been no recorded activity: `6`,
 - the file extension is `.sql`: `2`, and
-- there is no owner found in the VA security system: `2`.
+- there is no owner found in the security system: `2`.
 
 **AuditRank** = `5+6+2+2=15`
 
@@ -76,6 +76,7 @@ Datetime values are converted to their repective date only forms to remove unnee
 
 ## See also
 
-- File Class
-- File.GetFileOwner
-- FileCollection.AuditRank
+- [File Class](./filedetails.file.md)
+- [File.GetFileOwner](./filedetails.file.getfileowner.md)
+- [FileCollection.AuditRank Property](./filedetails.filecollection.auditrank.md)
+- [Get-Acl](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-acl?view=powershell-7.5)
