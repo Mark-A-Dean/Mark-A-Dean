@@ -8,8 +8,9 @@ I joined the **Department of Veterans Affairs** in 2006 through the TCF Internsh
 Before public service, I was a R&D chemist in the automotive industry, and have worked in industrial warehouses organizing and managing inventory. My degree is in Biology with advanced studies in Vertebrate Zoology, Ecology, Biogeography, and taxonomy.
 
 ## Notable stuff here
-|File/ Directory|Function|For|Format|
+|Item|Function|For|Format|
 |:--|:--|:--|:--|
+|[Recast Portfolio](./projects/8)|Information management|Repository|Kanban|
 |[File Catalog](./portfolio/FileCatalog/README.md)|Documentation|Programme [^1]|.md|
 |[FileDetails](./portfolio/FileCatalog/powershell/modules/FileDetails)|Resusable custom functions|Module|PowerShell|
 |[DOEx.vw_FileDetails (Transact-SQL)](./portfolio/FileCatalog/pages/doex-vw_filedetails-transact-sql.md)|Indexed TSQL View|Full-text enabled for fuzzy lookups|.sql|
