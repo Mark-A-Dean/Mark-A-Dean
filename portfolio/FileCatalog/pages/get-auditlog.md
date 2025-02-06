@@ -17,8 +17,6 @@ Get-GetAuditLog
     -SqlDatabaseName <string>
 ```
 
-## Description
-
 ## Examples
 
 ### Example 1: Get all files in all subdirectories.
@@ -100,7 +98,7 @@ The fully qualified domain name of a SQL Server Instance. The ValidatePattern pa
 
 ### SqlDatabaseName  
 
-The name of the SQL database hosted on **SqlServerName** that stores a base table associated with the FileCollection Class.
+The name of the SQL database hosted on **SqlServerName** that stores a base table associated with the [FileCollection Class](./filedetails.filecollection.md).
 
 |||
 |:--|:--|
@@ -123,7 +121,7 @@ You can pass a hash table (i.e., a dictionary or associative array) with members
 
 **System.Data.DataTable**
 
-The FileCollection class object that is generated gets passed into the **Update-BaseTable**.
+The [FileCollection Class](filedetails.filecollection.md) object that is generated gets passed into the [Update-BaseTable](./update-basetable.md) cmdlet.
 
 **System.Windows.Forms**
 
@@ -131,11 +129,11 @@ Popup windows contain messages whenever an error exception is encountered.
 
 ## See also
 
-* AuditLog Class
-* AuditLogCollection Class
-* Inventory.AuditLog (Transact-SQL)
-* New-ExceptionWindow
-* Update-BaseTable
+* [AuditLog Class](./filedetails.auditlog.md)
+* [AuditLogCollection Class](./filedetails.auditlogcollection.md)
+* [Inventory.AuditLog (Transact-SQL)](./inventory-auditlog-transact-sql.md)
+* [New-ExceptionWindow](./new-exceptionwindow.md)
+* [Update-BaseTable](./update-basetable.md)
 
 ## References
 
