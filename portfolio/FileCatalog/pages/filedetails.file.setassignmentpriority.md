@@ -4,7 +4,7 @@
 
 Namespace: FileDetails  
 Module: FileDetails.psm1  
-Source: Get-FileDetails.ps1
+Source: [Get-FileDetails.ps1](./filedetails.file.md)
 
 Returns an alphabetical code value determined by the audit rank range and the active status of a file.
 
@@ -33,7 +33,7 @@ A zero-based indexed array with members that are evaluated in the function to pr
 
 ## Example
 
-The following example shows an abbreviated version of the File Class. The class's constructor method `File($p1)` contains two variables populated by other functions on which **SetAssignmentPriority** depends. The variables are passed into the function as a single array and the output sets the `AssignmentPriority` property.
+The following example shows an abbreviated version of the [File Class](./filedetails.file.md). The class's constructor method `File($p1)` contains two variables populated by other functions on which **SetAssignmentPriority** depends. The variables are passed into the function as a single array and the output sets the `AssignmentPriority` property.
 
 PowerShell
 ***
@@ -55,7 +55,7 @@ The assignment priority extends the ABC analysis prioritization matirx—an inve
 ### Logic and interpretations
 
 #### Terms
-- **Active**: Determined by the relationship of the date of the last file access or last write with the creation date and three years prior to the current [inventory] date.
+- **Active**: Determined by the relationship of the date of the last file access or last write with the creation date and three years prior to the current inventory cycle date.
 - **Priority**: The relative value of a review based on set of file properties.
 
 |AssignmentPriority|Interpretation|Statement|
@@ -69,6 +69,6 @@ The assignment priority extends the ABC analysis prioritization matirx—an inve
 
 ## See also
 
-- File Class
-- File.SetAuditRank
-- File.SetIsActive
+- [File Class](./filedetails.file.md)
+- [File.SetAuditRank](./filedetails.file.setauditrank.md)
+- [File.SetIsActive](./filedetails.file.setisactive.md)

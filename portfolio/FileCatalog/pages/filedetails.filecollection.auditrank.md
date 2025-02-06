@@ -3,9 +3,9 @@
 ## Definition
 Namespace: FileDetails  
 Module: FileDetails  
-Source: Get-FileDetails.ps1
+Source: [Get-FileDetails.ps1](./get-filedetails.md) 
 
-The sum of values based on the relationships between the three file dates, if `CreationTimeUtc` occurs within the last five years, and on the presence of a file owner. This value is set by the File.SetAuditRank File Class method.
+The sum of values based on the relationships between the three file dates, if `CreationTimeUtc` occurs within the last five years, and on the presence of a file owner. This value is set by the [File.SetAuditRank](./filedetails.file.setauditrank.md) method.
 
 PowerShell
 ***
@@ -50,7 +50,7 @@ Although rare, file system administrations can affect the metadata. For example,
 |`4`|Yes|The **SQL** file was not created within the 5 years prior to _Today_, has had activity (likely within 5 years prior to _Today_ ¹), and the file owner's account is not listed with the VA.|The data disposition should register as `keep`.|
 |`4`|No|The **SQL** file was not created within the 5 years prior to _Today_, has had activity (likely before the 5 years prior to _Today_ ¹), and the file owner's account is not listed with the VA.|Follow the data disposition.|
 |`3`|No|The **SQL** file was not created within the 5 years prior to _Today_, has had activity (likely before the 5 years prior to _Today_ ¹), and the file owner was not recorded by the file system.|_Case not yet observed_. Follow the data disposition.|
-|`2`|Yes|The **SQL** file was not created within the 5 years prior to _Today_, has had activity (likely within 5 years prior to _Today_ ¹), and 1) the file type is `.sql` or 2) and the file owner's account is not listed with the VA.|The data disposition should register as `keep`. The `sql` file may have served as source code for a persisting database object (e.g., a table, view, function, or procedure).|
+|`2`|Yes|The **SQL** file was not created within the 5 years prior to _Today_, has had activity (likely within 5 years prior to _Today_ ¹), and 1) the file type is `.sql` or 2) and the file owner's account is not listed with the file system security.|The data disposition should register as `keep`. The `sql` file may have served as source code for a persisting database object (e.g., a table, view, function, or procedure).|
 |`2`|No|The file was not created within the 5 years prior to _Today_, has had activity (likely before 5 years prior to _Today_ ¹), and 1) the file type is `.sql` or 2) and the file owner's account is not listed with the VA.|Follow the data disposition.|
 |`1`|Yes|The file was not created within the 5 years prior to _Today_, has had activity (likely within the 5 years prior to _Today_ ¹), and the file owner was not recorded by the file system.|The data disposition should register as `keep`.|
 |`1`|No|The file was not created within the 5 years prior to _Today_, has had activity (likely before the 5 years prior to _Today_ ¹), and the file owner was not recorded by the file system.|Follow the data disposition.|
@@ -59,9 +59,9 @@ Although rare, file system administrations can affect the metadata. For example,
 
 ## See also
 
-- File.SetAuditRank
-- FileCollection Class
+- [File.SetAuditRank](./filedetails.file.setauditrank.md)
+- [FileCollection Class](./filedetails.filecollection.md)
 
 ## Notes
 
-¹ _Likely_ activity is determined through the consideration of the `IsActive` value that is set independently and by the nature of the different dates in relation to the current date minus 3 years.
+¹ _Likely_ activity is determined through the consideration of the `IsActive` file system securitylue that is set independently and by the nature of the different dates in relation to the current date minus 3 years.

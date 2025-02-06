@@ -4,9 +4,9 @@
 
 Namespace: FileDetails  
 Module: FileDetails.psm1  
-Source: Get-FileDetails.ps1
+Source: [Get-FileDetails.ps1](./get-filedetails.md)
 
-Returns the file owner provided by the security descriptor or "No User Account Found" when a value is not found within the VA security framework.
+Returns the file owner provided by the security descriptor or "No User Account Found" when a value is not found within the security framework.
 
 PowerShell
 ***
@@ -29,7 +29,7 @@ A string containing the full path of the file.
 
 ## Example
 
-The following example shows an abbreviated version of the File Class and its `_owner` field. The class constructor method `File($p1)` stores the output of the `GetFileOwner` function (i.e., the file owner) in the `_owner` field, which then sets the Owner class property. If the file owner does not match the pattern: _any alphanumeric character[colon]S_ then "No User Account Found" is returned as the value.
+The following example shows an abbreviated version of the [File Class](./filedetails.file.md) and its `_owner` field. The class constructor method `File($p1)` stores the output of the `GetFileOwner` function (i.e., the file owner) in the `_owner` field, which then sets the file system Owner class property. If the file owner does not match the pattern: _any alphanumeric character[colon]S_ then "No User Account Found" is returned as the value.
 
 PowerShell  
 ***
@@ -51,8 +51,9 @@ There are times when the file owner property is empty or whitespace. There are m
 
 ### Exceptions
 
-Exceptions raised during the creation of the File class instance with appear in a pop up window and the Get-FileDetails cmdlet will terminate.
+Exceptions raised during the creation of the [File Class](./filedetails.file.md) instance with appear in a pop up window and the [Get-FileDetails](./get-filedetails.md) cmdlet will terminate.
 
 ## See also
 
-- File Class
+- [File Class](./filedetails.file.md)
+- [Get-Acl](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-acl?view=powershell-7.5)
