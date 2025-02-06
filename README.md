@@ -1,6 +1,4 @@
-🛠️ - _I am retooling this repository. As I tend to focus more on content and contexts, things here may appear more arcane rather than they are affixed with the clicky slick bits._
-
-👀 - _This is where I'm committing the most currently:_ [portfolio/FileCatalog](./portfolio/FileCatalog/README.md).
+🛠️ - _I'm in the process of retooling this repository. This is where I'm committing the most time currently_ ➡️ [portfolio/FileCatalog](./portfolio/FileCatalog/README.md).
 
 # About Mark 👋
 
@@ -12,14 +10,12 @@ Before public service, I was a R&D chemist in the automotive industry, and have 
 ## Interests
 
 - Data wrangling & interoperability
-- Trail running & reading
 - Programming
   - PowerShell, regex, XML, Liquid, T-SQL
-
-> I would choose XSLT or Liquid to be my deserted island programming language.
+- Trail running & reading
 
 ## Whazits
 - 🌱 I’m brushing up on Lean Six Sigma as it's been a few decades.
   - I use Kanban and Kaizen (DMAIC) daily, but it's muscle memory; I need the info to help teach others. 
-- 💬 Ask me about PowerShell, GitHub, running, writing, reporting, Texas, T-SQL; but I'll growl about SharePoint and Confluence. 
-- ⚡ Fun facts: I worked in the _Decaying Flesh Lab_ and was a bouncer during college. Although, neither job was as fun as it sounds.
+- 💬 Ask me about PowerShell, GitHub, running, writing, reporting, and T-SQL; but I'll growl about SharePoint and Confluence. 
+- ⚡ Fun facts: I worked in the _Decaying Flesh Lab_ and was a bouncer during college. Neither job was as fun as it sounds.
