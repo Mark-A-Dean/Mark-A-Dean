@@ -1,13 +1,13 @@
 # File Class
 Module: FileDetails  
-Source: Get-FileDetails.ps1
+Source: [Get-FileDetails.ps1](./get-filedetails.md)
 
 ## Description
 
 Represents an in-memory cache of file attributes.
 
 ## Examples
-The following example creates an instance of the File class for each file item found in a collection of directories and subdirectories. The instance is added to a datatable object using the File.Add method.
+The following example creates an instance of the [File Class](./filedetails.file.md) for each file item found in a collection of directories and subdirectories. The instance is added to a datatable object using the [File.Add(File) Method](./filedetails.file.add.md).
 
 PowerShell
 ``` powershell
@@ -32,7 +32,7 @@ PowerShell
 ```
 
 ## Constructors
-`File($p1)`&ensp;&ensp;&ensp;&ensp;Initializes a new instance of the File class with a file object from `System.IO.DirectoryInfo`.
+`File($p1)`&ensp;&ensp;&ensp;&ensp;Initializes a new instance of the [File Class](./filedetails.file.md) with a file object from `System.IO.DirectoryInfo`.
 
 ## Fields
 `_owner`&ensp;String
@@ -69,9 +69,9 @@ The owner of a file is one who may read, write (modify), or execute the file.
 
 ## See also
 
-- File.Add
-- File.GetFileOwner
-- File.GetURILastPiece
-- File.SetAuditRank
-- File.SetIsActive
-- FileCollection Class
+- [File.Add(File) Method](./filedetails.file.add.md)
+- [File.GetFileOwner](./filedetails.file.getfileowner.md)
+- [File.GetURILastPiece](./filedetails.file.geturilastpiece.md)
+- [File.SetAuditRank](./filedetails.file.setauditrank.md)
+- [File.SetIsActive](./filedetails.file.setisactive.md)
+- [FileCollection Class](./filedetails.filecollection.md)
