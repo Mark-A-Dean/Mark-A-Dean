@@ -19,8 +19,6 @@ Get-FileDetails
     -SqlDatabaseName <string>
 ```
 
-## Description
-
 ## Examples
 
 ### Example 1: Get all files in all subdirectories.
@@ -94,6 +92,8 @@ Name of a subdirectory located on a leaft of the ancestor path. May include regu
 
 Supplies the literal path to a file directory location storing a JSON schema file for a listing of excluded directories and files. The value of **ExcludedItemsSchema** is used exactly as it is typed.
 
+🚧 - this requirement is expected to change over the next versions. The ValidationScript has been disabled. (_PowerShell Core 7.x feature; conflicts with Windows PowerShell 5.1_)
+
 |||
 |:--|:--|
 |Type|[System.IO.FileInfo]|
@@ -125,7 +125,7 @@ The fully qualified domain name of a SQL Server Instance. The ValidatePattern pa
 
 ### SqlDatabaseName  
 
-The name of the SQL database hosted on **SqlServerName** that stores a base table associated with the FileCollection Class.
+The name of the SQL database hosted on **SqlServerName** that stores a base table associated with the [FileCollection Class](./filedetails.filecollection.md).
 
 |||
 |:--|:--|
@@ -147,7 +147,7 @@ You can pass a hash table (i.e., a dictionary or associative array) with members
 
 **System.Data.DataTable**
 
-The FileCollection class object that is generated gets passed into the **Update-BaseTable**.
+The [FileCollection Class](./filedetails.filecollection.md) object that is generated gets passed into the [Update-BaseTable](./update-basetable) cmdlet.
 
 **System.Windows.Forms**
 
@@ -155,10 +155,9 @@ Popup windows contain messages whenever an error exception is encountered.
 
 ## See also
 
-- FileCollection Class
-- New-ExceptionWindow
-- New-HashID
-- Update-BaseTable
+- [FileCollection Class](./filedetails.filecollection.md)
+- [New-ExceptionWindow](./new-exceptionwindow.md)
+- [Update-BaseTable](./update-basetable.md)
 
 ## References
 
