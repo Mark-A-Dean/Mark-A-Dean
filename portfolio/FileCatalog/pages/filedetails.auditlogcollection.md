@@ -3,7 +3,7 @@
 ## Definition
 Namespace: FileDetails  
 Module: FileDetails.psm1  
-Source: Get-FileDetails.ps1
+Source: [Get-AuditLog.ps1](./get-auditlog.md)
 
 Creates a table of in-memory data for a file system's file properties.
 
@@ -32,7 +32,7 @@ $AuditLogCollection=[System.Data.DataTable]::new();
 
 ## Remarks
 
-AuditLogCollection is a PowerShell object that calls the [.NET DataTable class](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-8.0). It is associated with the PowerShell function Add-File(), which serves as a method that populates the table with data from instances of the File Class.
+**AuditLogCollection** is a PowerShell object that calls the [.NET DataTable class](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-8.0).
 
 ****
 [System.Data.DataTable]::new()&ensp;&ensp;Initializes a new instance of the DataTable class with no arguments.
@@ -59,7 +59,7 @@ AuditLogCollection is a PowerShell object that calls the [.NET DataTable class](
 
 |||
 |:--|:--|
-|Add-AuditLog([AuditLog]$data)|PowerShell internal function that adds an instance of the AuditLog class to the datatable object.|
+|Add-AuditLog([AuditLog]$data)|PowerShell internal function that adds an instance of the [AuditLog](./filedetails.auditlog.md) class to the datatable object.|
 |[.NET DataTable Methods](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-8.0#methods)|Methods associated with the .NET DataTable class.|
 
 ## Events
@@ -71,7 +71,8 @@ AuditLogCollection is a PowerShell object that calls the [.NET DataTable class](
 
 ## See also
 
-- AuditLog Class
-- AuditLog.Add(AuditLog) Method
-- Get-AuditLog
-- Inventory.AuditLog (Transact-SQL)
+- [AuditLog Class](./filedetails.auditlog.md)
+- [AuditLog.Add(AuditLog) Method](./filedetails.auditlog.add.md)
+- [Get-AuditLog](./get-auditlog.md)
+- [Inventory.AuditLog (Transact-SQL)](./inventory-auditlog-transact-sql.md)
+- [Update-BaseTable](./update-basetable.md)
