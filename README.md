@@ -1,4 +1,4 @@
-🛠️ - _I'm in the process of retooling this repository. This is where I'm committing the most time currently_ [➡️ portfolio/FileCatalog](./portfolio/FileCatalog/README.md).
+🛠️ - _I'm in the process of retooling this project site. This is where I'm committing the most time currently_ [➡️ portfolio/FileCatalog](./portfolio/FileCatalog/README.md).
 
 # About Mark 👋
 
