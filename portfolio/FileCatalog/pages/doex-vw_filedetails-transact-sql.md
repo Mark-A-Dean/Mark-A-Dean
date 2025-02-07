@@ -1,6 +1,6 @@
 # DOEx.vw_FileDetails (Transact-SQL)
 
-**Applies to**: :heavy_check_mark: SQL Server
+**Applies to**: ✔️ SQL Server
 
 Returns a row for each file processed during an inventory cycle.
 
