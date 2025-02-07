@@ -12,10 +12,14 @@ Before public service, I was a R&D chemist in the automotive industry, and have 
 |Item|Function|For|Format|
 |:--|:--|:--|:--|
 |[File Catalog](./portfolio/FileCatalog/README.md)|Documentation|Programme [^1]|.md|
+<<<<<<< HEAD
 |[FileDetails](./portfolio/FileCatalog/powershell/modules/FileDetails)|Reusable custom functions|Module|PowerShell|
 |[DOEx.vw_FileDetails (Transact-SQL)](./portfolio/FileCatalog/pages/doex-vw_filedetails-transact-sql.md)|Indexed TSQL View|Full-text enabled for fuzzy lookups|.sql|
 |[Extensions](./portfolio/common/powerquery/extensions)|Reusable custom functions|Power Query global environment|.pq|
 |[Enums](./portfolio/common/powerquery/enums)|Provides a set of values.|Power BI|.pq|
+=======
+|[DOEx.vw_FileDetails (Transact-SQL)](./portfolio/FileCatalog/pages/doex-vw_filedetails-transact-sql.md)|Indexed TSQL View|Full-text enabled for fuzzy lookups|.sql|
+>>>>>>> 0bedc33d7386b609b0b489085ae353838784a67c
 
 ## Interests
 
