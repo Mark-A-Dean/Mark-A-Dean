@@ -45,6 +45,7 @@ PowerShell
 These fields respectively convert the CreationTimeUtc, LastAccessTimeUtc, and LastWriteTimeUtc datetime values to `yyyy-MM-dd` to avoid possible NULL exceptions.
 
 ## Properties
+
 |Name|Description|
 |:--|:--|
 |Auditor|The Active Directory account of the person who reviewed the files in the current directory.|
@@ -62,6 +63,7 @@ These fields respectively convert the CreationTimeUtc, LastAccessTimeUtc, and La
 |Parent|The file directory to the path of BIO team file share. Provides identifying redundancy.|
 
 ## Methods
+
 |Name|Description|
 |:--|:--|
 |`AuditLog.Add(AuditLog)`|Adds an instance of the class to a data table.|

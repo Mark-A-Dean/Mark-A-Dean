@@ -40,6 +40,7 @@ PowerShell
 The owner of a file is one who may read, write (modify), or execute the file.
 
 ## Properties
+
 |Name|Description|
 |:--|:--|
 |Ancestor1|The recognized first tier of the file directory system hierarchy. Might not be the highest directory in a path.|
@@ -59,6 +60,7 @@ The owner of a file is one who may read, write (modify), or execute the file.
 |XPK|Hexadecimal representation of the FullName, AuditRank, IsActive, LastAccessTimeUtc, and LastWriteTimeUtc attributes.|
 
 ## Methods
+
 |Name|Description|
 |:--|:--|
 |`File.Add(File)`|Adds an instance of the class to a data table.|

@@ -1,6 +1,6 @@
 # Update-BaseTable
 
-**Applies to**: :heavy_check_mark: SQL Server
+**Applies to**: ✔️ SQL Server
 
 NameSpace: FileDetails  
 Module: FileDetails.psm1  

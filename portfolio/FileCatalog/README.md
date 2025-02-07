@@ -15,6 +15,7 @@ The File Catalog programme creates and manages the actions and items associated 
 * Reporting
 
 ## 📘 Documents
+
 * [DOEx.vw_FileDetails (Transact-SQL)](./pages/doex-vw_filedetails-transact-sql.md)
 * [File Class](./pages/filedetails.file.md)
 * [File.Add(File) Method](./pages/filedetails.file.add.md)

@@ -1,6 +1,6 @@
 # Inventory.AuditLog (Transact-SQL)
 
-**Applies to**: :heavy_check_mark: SQL Server
+**Applies to**: ✔️ SQL Server
 
 Returns a row for each audit log file processed during an inventory cycle.
 

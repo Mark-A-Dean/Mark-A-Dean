@@ -1,6 +1,6 @@
 # Inventory.SetDataDisposition (Transact-SQL)
 
-**Applies to**: :heavy_check_mark: SQL Server
+**Applies to**: ✔️ SQL Server
 
 `Inventory.SetDataDisposition` is a scalar-valued function that sets the data disposition for a file object in the [Inventory.FileDetails](inventory-filedetails-transact-sql.md) table.
 
