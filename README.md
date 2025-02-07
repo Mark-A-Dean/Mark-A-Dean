@@ -8,6 +8,7 @@ I joined the **Department of Veterans Affairs** in 2006 through the TCF Internsh
 Before public service, I was a R&D chemist in the automotive industry, and have worked in industrial warehouses organizing and managing inventory. My degree is in Biology with advanced studies in Vertebrate Zoology, Ecology, Biogeography, and taxonomy.
 
 ## Notable stuff here
+
 |Item|Function|For|Format|
 |:--|:--|:--|:--|
 |[File Catalog](./portfolio/FileCatalog/README.md)|Documentation|Programme [^1]|.md|
