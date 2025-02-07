@@ -80,7 +80,7 @@ This stored procedure is called from custom PowerShell cmdlets whereby its singl
 
 This TSQL stored procedure contains a scalar function, `Inventory.SetDataDisposition`. This object must be present in the database along with the _User-Defined Table Type_ (UDTT), `Inventory.DT_FileDetails`.
 
-### Maintain an existing Full Text indexes
+### Maintain existing Full Text indexes
 
 Modified with the following code in the presence of a full text index on the base table and its indexed view. 
 
