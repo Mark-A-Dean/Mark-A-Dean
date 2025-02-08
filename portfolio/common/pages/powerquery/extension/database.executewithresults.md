@@ -4,7 +4,7 @@
 
 Extends the Power Query function, [`Sql.Database`](https://learn.microsoft.com/en-us/powerquery-m/sql-database) with three options and enforcing query folding by passing the SQL query results through [`Value.NativeQuery`](https://learn.microsoft.com/en-us/powerquery-m/value-nativequery).
 
-## Syntax
+## Source code
 
 <table>
 <tr><td style="font-size:9;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
