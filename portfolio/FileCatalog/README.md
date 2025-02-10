@@ -16,6 +16,7 @@ The File Catalog programme creates and manages the actions and items associated 
 
 ## 📘 Documents
 
+* [Database.ExecuteWithResults Function](../common/pages/powerquery/extension/database/database.executewithresults.md)
 * [DOEx.vw_FileDetails (Transact-SQL)](./pages/doex-vw_filedetails-transact-sql.md)
 * [File Class](./pages/filedetails.file.md)
 * [File.Add(File) Method](./pages/filedetails.file.add.md)
