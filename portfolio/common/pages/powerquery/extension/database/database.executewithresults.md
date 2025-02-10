@@ -15,7 +15,7 @@ Extends the Power Query function, [`Sql.Database`](https://learn.microsoft.com/e
 ## Source code
 
 <table>
-<tr><td style="font-size:9;color:#FFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
+<tr><td style="font-size:9;color:#FFFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
 <img src="./sc-database.jpg" alt="Database.pq source code in the Power Query language.">
@@ -28,7 +28,7 @@ Extends the Power Query function, [`Sql.Database`](https://learn.microsoft.com/e
 ### Example 1: Execute SQL query with discrete parameter values
 
 <table>
-<tr><td style="font-size:9;color:#FFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
+<tr><td style="font-size:9;color:#FFFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
 <img src="./ex-database-conventional.jpg" alt="Database.ExecuteWithResults using text values in the parameters.">
@@ -41,7 +41,7 @@ Extends the Power Query function, [`Sql.Database`](https://learn.microsoft.com/e
 This example will return the same results as the previous when the elements of the first instance of `EnumSqlServers` and the `EnumSqlQueries` query identified with `1` match.
 
 <table>
-<tr><td style="font-size:9;color:#FFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
+<tr><td style="font-size:9;color:#FFFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
 <img src="./ex-database-custom.jpg" alt="Database.ExecuteWithResults using argument values in the parameters">
