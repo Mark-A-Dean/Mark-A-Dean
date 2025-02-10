@@ -27,9 +27,9 @@ Returns the query identified by an integer value for queries stored in a variabl
 
 ### Example 1: Return a data set using the 3 query in the EnumSqlQueries variable.
 
-This example uses the [Database.ExecuteWithResult](../database/database.executewithresults.md) extension to return a query identified with `QueryID=3` in the `EnumSqlQueries variable`.
+This example uses the [Database.ExecuteWithResult](../database/database.executewithresults.md) extension to return a query identified with `QueryID=3` in the `EnumSqlQueries` variable.
 
-> The _EnumSqlQueries_ variable shares the same name with the parameter in the `Query.GetQuery()` function.
+> The _EnumSqlQueries_ variable shares the same name with the parameter in the `Query.GetQuery` function.
 
 <table>
 <tr><td style="font-size:9;color:#FFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
@@ -44,7 +44,7 @@ This example uses the [Database.ExecuteWithResult](../database/database.executew
 
 ### EnumSQLQueries variable
 
-The number of members within an instance of EnumSQLQueries may differ; however, the it is crucial that the first member of each set be an integer value (e.g., `1`).
+The number of members within an instance of `EnumSQLQueries` may differ; however, the it is crucial that the first member of each set be an integer value (e.g., `1`).
 
 #### Set members  
 1) QueryID as `integer`
