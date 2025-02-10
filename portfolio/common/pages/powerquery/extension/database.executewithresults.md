@@ -10,7 +10,7 @@ Extends the Power Query function, [`Sql.Database`](https://learn.microsoft.com/e
 <tr><td style="font-size:9;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;">
 
-```m
+```
 section Database;
     shared Database.ExecuteWithResults=(
         ServerName as text,
@@ -45,7 +45,7 @@ section Database;
 <tr><td style="font-size:9;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;">
 
-```m
+```
 results=Database.ExecuteWithResults(
     "MyServer",
     "MyDatabase",
@@ -64,7 +64,7 @@ This example will return the same results as the previous when the elements of t
 <tr><td style="font-size:9;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;">
 
-```m
+```
 results=Database.ExecuteWithResults(
     EnumSqlServers[0].ServerName,
     EnumSqlServers[0].DatabaseName,
