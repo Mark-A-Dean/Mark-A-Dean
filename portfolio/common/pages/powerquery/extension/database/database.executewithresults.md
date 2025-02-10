@@ -2,7 +2,6 @@
 title: Database.ExecuteWithResults Function
 published: true
 creator: Mark A. Dean
-release_date: {{ "now" | date: "%Y-%m-%dT%H:%M:%SZ" }}
 ---
 # Database.ExecuteWithResults Function
 
