@@ -61,8 +61,7 @@ Using variables in place of parameter string values codifies the function and al
 
 ## See also
 
-- [EnumSqlQueries] :construction: _info page under construction_.
 - [EnumSqlServer] :construction: _info page under construction_.
-- [Query.GetQuery] :construction: _info page under construction_.
+- [Query.GetQuery](../query/query.getquery.md)
 - [Sql.Database](https://learn.microsoft.com/en-us/powerquery-m/sql-database)
 - [Value.NativeQuery](https://learn.microsoft.com/en-us/powerquery-m/value-nativequery)
