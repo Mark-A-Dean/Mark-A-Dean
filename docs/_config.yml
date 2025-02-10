@@ -1,22 +1,3 @@
-repository: https://github.com/Mark-A-Dean/Mark-A-Dean/
-output: web
-site_title: Mark-A-Dean
-google_analytics: 
-host: 127.0.0.1
-port: 4000
-exclude:
-  - .idea/
-  - .gitignore
-  - vendor
-highlighter: rouge
-markdown: kramdown
-kramdown:
- input: GFM
- auto_ids: true
- hard_wrap: false
- syntax_highlighter: rouge
-collections:
-  tooltips:
-    output: false
-sidebars:
-- home_sidebar
+name: Mark-A-Dean
+theme: jekyll-theme-minimal
+description: Promoting data literacy with data analytics.
