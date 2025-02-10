@@ -1,9 +1,3 @@
 name: Mark-A-Dean
 description: Promoting data literacy with data analytics.
-exclude:
-  - .idea/
-  - .gitignore
-  - vendor
-output: web
-side_title: Mark-A-Dean
 theme: jekyll-theme-minimal
