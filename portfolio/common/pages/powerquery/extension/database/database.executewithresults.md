@@ -1,3 +1,9 @@
+---
+title: Database.ExecuteWithResults Function
+published: true
+creator: Mark A. Dean
+release_date: {{ "now" | date: "%Y-%m-%dT%H:%M:%SZ" }}
+---
 # Database.ExecuteWithResults Function
 
 ## Definition
@@ -8,31 +14,9 @@ Extends the Power Query function, [`Sql.Database`](https://learn.microsoft.com/e
 
 <table>
 <tr><td style="font-size:9;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
-<tr><td style="border:1px solid #808080;">
+<tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
-```
-section Database;
-    shared Database.ExecuteWithResults=(
-        ServerName as text,
-        DatabaseName as text,
-        Query as text
-    ) as table =>
-    let
-        _source=Sql.Database(
-            ServerName,
-            DatabaseName,
-            [
-                MaxDegreeOfParallelism=4,
-                CommandTimeout=#duration(0,0,3,0),
-                ConnectionTimeout=#duration(0,0,0,30)
-            ]
- ),
-        Results=Value.NativeQuery(
-            _source,Query,null,[EnableFolding=true]
-        )
-    in
-        Results;
-```
+![Database.pq source code in the Power Query language.](./sc-database.jpg)
 
 </td></tr>
 </table>
@@ -43,34 +27,22 @@ section Database;
 
 <table>
 <tr><td style="font-size:9;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
-<tr><td style="border:1px solid #808080;">
+<tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
-```
-results=Database.ExecuteWithResults(
-    "MyServer",
-    "MyDatabase",
-    "SELECT TOP(10) * FROM sys.tables"
-)
-```
+![Database.ExecuteWithResults using text values in the parameters.](./ex-database-conventional.jpg)
 
 </td></tr>
 </table>
 
-### Example 2: Execute SQL query using variables
+### Example 2: 
 
 This example will return the same results as the previous when the elements of the first instance of `EnumSqlServers` and the `EnumSqlQueries` query identified with `1` match.
 
 <table>
 <tr><td style="font-size:9;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
-<tr><td style="border:1px solid #808080;">
+<tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
-```
-results=Database.ExecuteWithResults(
-    EnumSqlServers[0].ServerName,
-    EnumSqlServers[0].DatabaseName,
-    Query.GetQuery(EnumSqlQueries[1])
-)
-```
+![Database.ExecuteWithResults using argument values in the parameters.](./ex-database-custom.jpg)
 
 </td></tr>
 </table>
