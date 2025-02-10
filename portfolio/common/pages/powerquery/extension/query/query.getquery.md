@@ -15,7 +15,7 @@ Returns the query identified by an integer value for queries stored in a variabl
 ## Source code
 
 <table>
-<tr><td style="font-size:9;color:#FFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
+<tr><td style="font-size:9;color:#FFFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
 <img src="./sc-query.jpg" alt="Database.pq source code in the Power Query language.">
@@ -32,7 +32,7 @@ This example uses the [Database.ExecuteWithResult](../database/database.executew
 > The _EnumSqlQueries_ variable shares the same name with the parameter in the `Query.GetQuery` function.
 
 <table>
-<tr><td style="font-size:9;color:#FFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
+<tr><td style="font-size:9;color:#FFFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
 <img src="./ex-query-custom.jpg" alt="Database.ExecuteWithResults using Query.GetQuery(3,EnumSqlQueries) to return a query script to execute.">
@@ -52,7 +52,7 @@ The number of members within an instance of `EnumSQLQueries` may differ; however
 3) QueryName as `text` [_optional_]
 
 <table>
-<tr><td style="font-size:9;color:#FFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
+<tr><td style="font-size:9;color:#FFFFFF;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
 <img src="./ex-var-enumSqlQueries.jpg" alt="Example showing the definition of the EnumSqlQueries variable.">
