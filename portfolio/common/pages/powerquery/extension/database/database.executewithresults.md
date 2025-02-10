@@ -15,7 +15,7 @@ Extends the Power Query function, [`Sql.Database`](https://learn.microsoft.com/e
 <tr><td style="font-size:9;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
-![Database.pq source code in the Power Query language.](./sc-database.jpg)
+<img src="./sc-database.jpg" alt="Database.pq source code in the Power Query language.">
 
 </td></tr>
 </table>
@@ -28,7 +28,7 @@ Extends the Power Query function, [`Sql.Database`](https://learn.microsoft.com/e
 <tr><td style="font-size:9;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
-![Database.ExecuteWithResults using text values in the parameters.](./ex-database-conventional.jpg)
+<img src="./ex-database-conventional.jpg" alt="Database.ExecuteWithResults using text values in the parameters.">
 
 </td></tr>
 </table>
@@ -41,7 +41,7 @@ This example will return the same results as the previous when the elements of t
 <tr><td style="font-size:9;background:#4682B4;border:1px solid #808080;">Power Query</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
-![Database.ExecuteWithResults using argument values in the parameters.](./ex-database-custom.jpg)
+<img src="./ex-database-custom.jpg" alt="Database.ExecuteWithResults using argument values in the parameters">
 
 </td></tr>
 </table>
