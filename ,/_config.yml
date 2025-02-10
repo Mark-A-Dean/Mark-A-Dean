@@ -1,3 +1,40 @@
 name: Mark-A-Dean
-theme: jekyll-theme-minimal
 description: Promoting data literacy with data analytics.
+exclude:
+  - .idea/
+  - .gitignore
+  - vendor
+highlighter: rouge
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
+markdown: kramdown
+output: web
+side_title: Mark-A-Dean
+theme: jekyll-theme-minimal
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: false
+      # if you don't want to use Commento.io and just hide comments, change true to false wherever you see the comments property
+      search: true
+      sidebar: home_sidebar
+      topnav: topnav
+  -
+    scope:
+      path: ""
+      type: "tooltips"
+    values:
+      layout: "page"
+      search: true
+      tooltip: true
+
+sidebars:
+- home_sidebar
