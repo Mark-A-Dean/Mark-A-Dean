@@ -13,6 +13,7 @@ Before public service, I was a R&D chemist in the automotive industry, and have 
 |:--|:--|:--|:--|
 |[File Catalog](./portfolio/FileCatalog/README.md)|Documentation|Programme [^1]|.md|
 |[DOEx.vw_FileDetails (Transact-SQL)](./portfolio/FileCatalog/pages/doex-vw_filedetails-transact-sql.md)|Indexed TSQL View|Full-text enabled for fuzzy lookups|.sql|
+|[Database.ExecuteWithResults](./portfolio/common/pages/powerquery/extension/database.executewithresults.md)|Extends the Sql.Database and Value.NativeQuery functions in a global environment.|.pq|
 
 ## Interests
 
