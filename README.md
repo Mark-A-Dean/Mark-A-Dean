@@ -7,7 +7,7 @@ I joined the **Department of Veterans Affairs** in 2006 through the TCF Internsh
 
 Before public service, I was a R&D chemist in the automotive industry, and have worked in industrial warehouses organizing and managing inventory. My degree is in Biology with advanced studies in Vertebrate Zoology, Ecology, Biogeography, and taxonomy.
 
-## Notable stuff here
+## Examples of stuff you'll find here
 
 |Item|Function|For|Format|
 |:--|:--|:--|:--|
@@ -23,8 +23,8 @@ Before public service, I was a R&D chemist in the automotive industry, and have 
 - Trail running & reading
 
 ## Whazits
-- 💬 Ask me about PowerShell, GitHub, T-SQL, and running. _I'll growl about SharePoint and Confluence_. 
-- 🌱 I use Kanban and Kaizen (DMAIC), but it's muscle memory. I need the info to help teach others. 
-- ⚡ Fun facts: I worked in the _Decaying Flesh Lab_ and was a bouncer during college. Neither job was as fun as it sounds.
+- 💬 Ask me about PowerShell, JSON schemas and XSD, GitHub, T-SQL, and trail running.
+- 🌱 I use Kanban and Kaizen (DMAIC), but it's muscle memory.
+- ⚡ Fun facts: I worked in the _Decaying Flesh Lab_ and as a bouncer during college. -Neither job was as fun as it sounds.
 
 [^1]: _programme_. This spelling is intentional and loosely references a series of performances. Here, it reflects the combination of program elements that are designed and engineered to meet objectives and goals.
