@@ -1,6 +1,8 @@
 🛠️ - _I'm in the process of retooling this project site. I'm committing the most time here_ [➡️ portfolio/FileCatalog](./portfolio/FileCatalog/README.md).
 
-# About 👋
+# About Mark 👋
+
+---
 
 ## Background
 
