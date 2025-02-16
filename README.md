@@ -38,7 +38,7 @@ Compare this PowerShell script with other languages like Python and C#.
 <tr><td style="font-size:9;color:#FFFFFF;background:#4682B4;border:1px solid #808080;">PowerShell</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
-<img src="./_assets/img/hello-world.png" alt="PowerShell variable $x='Hello World'. The first 5 characters are returned by $x[0..4].">
+<img src="./_assets/img/hello-world.png">
 
 </td></tr>
 </table>
@@ -49,7 +49,7 @@ A truer measure of PowerShell's usefulness comes with its regex support. The fol
 <tr><td style="font-size:9;color:#FFFFFF;background:#4682B4;border:1px solid #808080;">PowerShell</td></tr>
 <tr><td style="border:1px solid #808080;background: #f5f5f5;">
 
-<img src="./_assets/img/hello-world-regex.png" alt="PowerShell variable $x is parsed into an object complete with a capturing group with a successful return.">
+<img src="./_assets/img/hello-world-regex.png">
 
 </td></tr>
 </table>
