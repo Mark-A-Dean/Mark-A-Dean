@@ -20,11 +20,11 @@ Before my public service duty, I was a R&D chemist in the automotive industry, a
 
 |Item|Function|Description|
 |:--|:--|:--|
-|Documents|[File Catalog](./portfolio/FileCatalog/README.md)|A programme [^1]|
+|Documents|[File Catalog](./portfolio/FileCatalog/README.md)|A programme [^1].|
 |Objects|[DOEx.vw_FileDetails (Transact-SQL)](./portfolio/FileCatalog/pages/doex-vw_filedetails-transact-sql.md)|Indexed TSQL View that is Full Text enabled for fuzzy lookups.|
 |Extensions|[Database.ExecuteWithResults](./portfolio/common/pages/powerquery/extension/database/database.executewithresults.md)|Extends the **Power Query (_m_)** Sql.Database and Value.NativeQuery functions for **Microsoft Power BI** optimization.|
 
-## Powershell champion
+## PowerShell champion
 
 The bottom line is that PowerShell modules are easily distributed and file copied, especially in a Microsoft environment. Using modules has proven an efficient alternative to software packagers and installers. Additionally, PowerShell became platform independent when PowerShell Core was released.
 
