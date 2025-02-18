@@ -1,4 +1,4 @@
-# File.GetURILastPiece([String]) Method
+# InventoryRoot.GetURILastPiece([String]) Method
 
 ## Definition
 
@@ -25,23 +25,19 @@ A URI to be parsed. The URI is the full file path down to a specific directory.
 
 |URI|Type|Description|
 |:--|:--|:--|
-|**Ancestor1**|`[System.IO.FileInfo]`|This path is supplied by the first parameter on the Get-FileDetails.ps1 cmdlet.|
-|**Parent**|`string`|Full file path to the immediate directory where the file is located.|
+|**AncestorPath**|`[System.IO.FileInfo]`|This path is supplied by the first parameter on the [Get-FileDetails.ps1](./get-filedetails.md) cmdlet.|
 
 ## Example
 
-The following example shows an abbreviated version of the [File Class](./filedetails.file.md). The class constructor method `File($p1)` sets two properties: `Ancestor1` and `Parent` by calling the function and passing in URIs for parsing. `Ancestor1` is added into the class object as a custom property.
+The following example shows the constructor method (_ctor_) of the [InventoryRoot Class](./filedetails.inventoryroot.md). The ctor passes a URI for parsing. `RootDirectoryName` is added into the class object as a property.
 
 PowerShell
-***
+
 ``` powershell
-Class File{
-    [string] $Ancestor1;
-    [string] $Parent;
-    File($p1){
-        $this.Ancestor1=$this.GetURILastPiece($p1.Ancestor1);
-        $this.Parent=$this.GetURILastPiece($p1.DirectoryName);
-    }
+InventoryRoot($p1){
+    $this.RootPath=$p1[0];
+    $this.RootDirectoryName=$this.GetURILastPiece($p1[0]);
+    $this.SubdirectoryQuery=$p1[1];
 }
 ```
 
@@ -77,7 +73,6 @@ Regex options are parameters that control the behavior of a regular expression[^
 
 ## See also
 
-- [File Class](./filedetails.file.md)
 - [Get-FileDetails](./get-filedetails.md)
 - [InventoryRoot Class](./filedetails.inventoryroot.md)
 
