@@ -28,7 +28,7 @@ The File Catalog programme creates and manages the actions and items associated 
 * [FileCollection Class](./pages/filedetails.filecollection.md)
 * [FileCollection.AuditRank Property](./pages/filedetails.filecollection.auditrank.md)
 * [FileCollection.IsActive Property](./pages/filedetails.filecollection.isactive.md)
-* [Get-FileDetails](./pages/filedetails/get-filedetails.md)
+* [Get-FileDetails](./pages/get-filedetails.md)
 * [Inventory.FileDetails (Transact-SQL)](./pages/inventory-filedetails-transact-sql.md)
 * [Inventory.SetDataDisposition (Transact-SQL)](./pages/inventory-setdatadisposition-transact-sql.md)
 * [New-ExceptionWindow](./pages/new-exceptionwindow.md)
