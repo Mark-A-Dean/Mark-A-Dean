@@ -15,7 +15,7 @@
 |2009|Graduated TCF and worked on the VISN 17 data warehouse and the Region 2 SharePoint.|
 |2012|Transitioned as an **Enterprise Data Architect** to the **Business Intelligence Service Line** to serve on the VA's Corporate Data Warehouse (CDW) Architect Team.|
 |2015|Redesigned and released the CDW Metadata Report Suite. Undertook an additional role to provide national CDW project/ workgroup support.|
-|2016-2021|Developed an inventory paradigm that serves several cataloging and auditing programs. Programs included service account management and customer SQL database views audits.|
+|2016-2021|Developed an inventory paradigm that serves several cataloging and auditing programs. Programs included service account management and customer SQL database view audits.|
 |2021|Helped start the CDW Customer Engagement team—the offshoot of the project support role.|
 |2022|Joined the **VHA Business Information Office Revenue Operations** to provide technical and data warehousing experience.|
 
