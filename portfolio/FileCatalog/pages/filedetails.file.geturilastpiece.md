@@ -4,7 +4,7 @@
 
 Namespace: FileDetails  
 Module: FileDetails.psm1  
-Source: [Get-FileDetails.ps1](./modules/powershell/filedetails/get-filedetails.md)
+Source: [Get-FileDetails.ps1](./get-filedetails.md)
 
 Calls the internal function `Get-URILastPiece` to return the last node (also _piece_ when used of a `string` value) of a Uniform Resource Identifier (URI) using a Regular Expression (regex) operation[^1].
 
@@ -30,7 +30,7 @@ A URI to be parsed. The URI is the full file path down to a specific directory.
 
 ## Example
 
-The following example shows an abbreviated version of the [File Class](https://github.com/Mark-A-Dean/BIO_Revenue_Ops/blob/main/Pages/filedetails.file.md). The class constructor method `File($p1)` sets two properties: `Ancestor1` and `Parent` by calling the function and passing in URIs for parsing. `Ancestor1` is added into the class object as a custom property.
+The following example shows an abbreviated version of the [File Class](./filedetails.file.md). The class constructor method `File($p1)` sets two properties: `Ancestor1` and `Parent` by calling the function and passing in URIs for parsing. `Ancestor1` is added into the class object as a custom property.
 
 PowerShell
 ***
@@ -78,7 +78,7 @@ Regex options are parameters that control the behavior of a regular expression[^
 ## See also
 
 - [File Class](./filedetails.file.md)
-- [Get-FileDetails](./modules/powershell/filedetails/get-filedetails.md)
+- [Get-FileDetails](./get-filedetails.md)
 - [InventoryRoot Class](./filedetails.inventoryroot.md)
 
 ## References
