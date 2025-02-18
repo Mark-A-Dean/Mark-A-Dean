@@ -15,7 +15,7 @@
 |2009|Graduated TCF and worked on the VISN 17 data warehouse and the Region 2 SharePoint.|
 |2012|Transitioned as an **Enterprise Data Architect** to the **Business Intelligence Service Line** to serve on the VA's Corporate Data Warehouse (CDW) Architect Team.|
 |2015|Redesigned and released the CDW Metadata Report Suite. Undertook an additional role to provide national CDW project/ workgroup support.|
-|2016-2021|Developed an inventory paradigm that serves several cataloging and auditing programs.|
+|2016-2021|Developed an inventory paradigm that serves several cataloging and auditing programs. Programs included service account management and customer SQL database views audits.|
 |2021|Helped start the CDW Customer Engagement team—the offshoot of the project support role.|
 |2022|Joined the **VHA Business Information Office Revenue Operations** to provide technical and data warehousing experience.|
 
@@ -29,9 +29,9 @@
 
 ## PowerShell champion
 
-The bottom line is that PowerShell modules are easily distributed and file copied, especially in a Microsoft Windows server environment. Modules are an efficient alternative to software packagers and installers. And, PowerShell became platform independent with the release PowerShell Core. We commonly call this _PowerShell 7.x_.
+The bottom line is that PowerShell modules are easily distributed and file copied, especially in a Microsoft Windows server environment. Modules are an efficient alternative to software packagers and installers. PowerShell became platform independent with the release PowerShell Core. We commonly call this _PowerShell 7.x_.
 
-PowerShell is learned quickly through its similarities with other languages like Python. As it leans heavily on .NET, it brings C# into clearer focus for the learner. PowerShell executes from SQL Server jobs either from **SQL Server Integration Services (SSIS)** packages or as standalone code; and it readily interprets or parses other languages—especially markup languages like **JSON** and **XML**. PowerShell users typically begin with basic functional programming (_cmdlets_) to build familiarity. I began by running _Get_-type cmdlets against **Active Directory**. Soon, I was building custom classes and functions with SQL Server serving as the storage backend as attention shifted my way.
+PowerShell is learned quickly through similarities with other languages like Python. As it leans heavily on .NET, it brings C# into clearer focus for the learner. PowerShell executes from SQL Server jobs either from **SQL Server Integration Services (SSIS)** packages or as standalone code—providing an introduction TSQL programmers while extending data **ETL** capabilities. Also, PowerShell interprets or parses other languages—especially markup languages like **JSON** and **XML**. PowerShell users typically begin with basic functional programming (_cmdlets_) to build their familiarity. I began by running _Get_-type cmdlets against **Active Directory**. Soon, I was building custom classes and functions as attention shifted my way.
 
 A truer measure of PowerShell's usefulness comes with its regex support. The following example uses the [.NET Regex class](https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-9.0) to return an object that contains the capture group _n_, which contains all the text found between the start of _x_ up to the first character _o_ if and only if _o_ is followed by the character _r_. Each object property, like `Success` or `Value`, is referable to other program components.
 
@@ -48,12 +48,12 @@ A truer measure of PowerShell's usefulness comes with its regex support. The fol
 
 ## What am I currently doing?
 
-* Studying Python by taking [Complete Python Mastery](https://codewithmosh.com/p/python-programming-course-beginners) from [Code with Mosh](https://codewithmosh.com/).
-    * With VA's adoption of Azure Cloud, Agile, and—to some extent—Power BI (visualizations), I see the need to transfer from a PowerShell programmer into Python.
+* Studying Python with [Complete Python Mastery](https://codewithmosh.com/p/python-programming-course-beginners) from [Code with Mosh](https://codewithmosh.com/).
+    * With VA's adoption of Azure Cloud (and Power BI and its visualizations to some extent), I see the need to transfer from a PowerShell programmer into Python.
 
 ## Interests
 
-- Data design and wrangling.
+- Data design (i.e., modeling) and wrangling.
 - Metadata cataloging and vocabulary mapping.
 - Trail running, soccer, and reading.
 
