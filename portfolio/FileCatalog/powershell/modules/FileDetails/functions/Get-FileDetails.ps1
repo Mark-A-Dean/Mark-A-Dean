@@ -8,7 +8,7 @@ function Get-FileDetails{
             $x=@{
                 AncestorPath="\\myFileShare\MyDirectory\";
                 Subdirectory=".*?";
-                ExcludedItemsSchema="\\myFileShare\MyDirectory\excludedItems.schema.json";
+                ExcludedItemsSchema="\\myFileShare\MyDirectory\json-schema-excludedItems.json";
                 ExcludedItemsFile="\\myFileShare\MyDirectory\excludedItems.json";
                 SqlServerName="MySqlServerInstance";
                 SqlDatabaseName="MyDatabaseName";
@@ -20,17 +20,19 @@ function Get-FileDetails{
             [System.Data.DataTable]
             [System.Windows.Forms]
         .NOTES
+            Version 3.5.0
         .COMPONENT
-            FileDetails
+            FileDetails.psm1
         .FUNCTIONALITY
             Data collection and management.
     #>
     [CmdletBinding()]
     param(
-        [Parameter(Mandatory=$true,
-            Position=0,
+        [Parameter(
+            Mandatory=$true,
             ValueFromPipelineByPropertyName=$true,
-            HelpMessage="Literal path to file directory locations.")]
+            HelpMessage="Literal path to file directory locations."
+        )]
         [ValidateScript(
             {
                 if(!($_ |Test-Path -PathType Container)){
@@ -41,38 +43,37 @@ function Get-FileDetails{
         )]
         [System.IO.FileInfo] $AncestorPath,
 
-        [Parameter(Mandatory=$true,
-            Position=1,
-            HelpMessage="Name of a subdirectory. May include regular expressions for fuzzy searches.")]
+        [Parameter(
+            Mandatory=$true,
+            HelpMessage="Name of a subdirectory. May include regular expressions for fuzzy searches."
+        )]
         [string] $Subdirectory,
 
-        [Parameter(Mandatory=$true,
-            Position=2,
+        [Parameter(
+            Mandatory=$false,
             ValueFromPipelineByPropertyName=$true,
-            HelpMessage="Literal path to a JSON schema file for excluded directories and files.")]
+            HelpMessage="Literal path to a JSON schema file for excluded directories and files."
+        )]
         [System.IO.FileInfo] $ExcludedItemsSchema,
 
         [Parameter(
-            Mandatory=$true,
-            Position=3,
+            Mandatory=$false,
             ValueFromPipelineByPropertyName=$true,
-            HelpMessage="Literal path to a JSON file of excluded directories and files.")]
+            HelpMessage="Literal path to a JSON file of excluded directories and files."
+        )]
         [System.IO.FileInfo] $ExcludedItemsFile,
 
         [Parameter(
             Mandatory=$true,
-            Position=4,
             HelpMessage="FQDN of a SQL Server Instance.")
         ]
-        [ValidatePattern("^\w+?\.vha\.med\.va\.gov$")]
+        #[ValidatePattern("^\w+?\.this\.this$")]
         [string]$SqlServerName,
         
         [Parameter(
             Mandatory=$true,
-            Position=5,
             HelpMessage="SQL database name where a base table is stored."
-        )
-        ]
+        )]
         [string]$SqlDatabaseName
     )
     begin{
@@ -80,12 +81,30 @@ function Get-FileDetails{
             'Microsoft.SqlServer.Smo'
         );
         Add-Type -AssemblyName System.Windows.Forms;
+
     }
     process{
         try {
             $noError=$true;
-            $_dirExclude=Get-ExcludedItems -LiteralPath $ExcludedItemsFile;
 #region classes;
+            Class InventoryRoot{
+                [string] $RootPath;
+                [string] $RootDirectoryName;
+                [string] $SubdirectoryQuery;
+
+                InventoryRoot($p1){
+                    $this.RootPath=$p1[0];;
+                    $this.RootDirectoryName=$this.GetURILastPiece($p1[0]);
+                    $this.SubdirectoryQuery=$p1[1];
+                }
+                Add($q1){
+                    Add-InventoryRoot $q1;
+                }
+                [string]GetURILastPiece($q1){
+                    $results=Get-URILastPiece $q1;
+                    return $results;
+                }
+            }
             Class File{
                 [string] hidden $_owner;
                 [string] $Ancestor1;
@@ -169,10 +188,8 @@ function Get-FileDetails{
                     Add-File $q1;
                 }
                 [string]GetURILastPiece($q1){
-                    $regexOptions=[Text.RegularExpressions.RegexOptions]"IgnoreCase, CultureInvariant";
-                    $_uriPieceMatch="[^\\]+\\?$";
-                    $x=([Regex]::Match($q1,$_uriPieceMatch,$regexOptions).Value).Replace("\","");
-                    return $x;
+                    $results=Get-URILastPiece $q1;
+                    return $results;
                 }
                 [string]GetFileOwner($q1){
                     $x=(Get-Acl $q1).Owner;
@@ -186,6 +203,11 @@ function Get-FileDetails{
             }
 #endregion;
 #region datatables objects;
+            $InventoryRootCollection=[System.Data.DataTable]::new();
+                [void]$InventoryRootCollection.Columns.Add("RootPath",[string]);
+                [void]$InventoryRootCollection.Columns.Add("RootDirectoryName",[string]);
+                [void]$InventoryRootCollection.Columns.Add("SubdirectoryQuery",[string]);
+
             $FileCollection=[System.Data.DataTable]::new();
                 [void]$FileCollection.Columns.Add("Ancestor1",[string]);
                 [void]$FileCollection.Columns.Add("AssignmentPriority",[string]);
@@ -204,6 +226,15 @@ function Get-FileDetails{
                 [void]$FileCollection.Columns.Add("XPK",[string]);
 #endregion;
 #region internal functions;
+            function Add-InventoryRoot([InventoryRoot]$data){
+                process{
+                    $row=$InventoryRootCollection.NewRow();
+                        $row.RootPath=$data.RootPath;
+                        $row.RootDirectoryName=$data.RootDirectoryName;
+                        $row.SubdirectoryQuery=$data.SubdirectoryQuery;
+                    $InventoryRootCollection.Rows.Add($row);
+                }
+            }
             function Add-File([File]$data){
                 process{
                     $row=$FileCollection.NewRow();
@@ -225,17 +256,41 @@ function Get-FileDetails{
                     $FileCollection.Rows.Add($row);
                 }
             }
+            function Get-URILastPiece($q1){
+                process{
+                    $regexOptions=[Text.RegularExpressions.RegexOptions]"IgnoreCase, CultureInvariant";
+                    $_uriPieceMatch="[^\\]+\\?$";
+                    ([Regex]::Match($q1,$_uriPieceMatch,$regexOptions).Value).Replace("\","");
+                }
+            }
 #endregion;
 #region data;
             try{
-                $_dirCollection=(Get-ChildItem $AncestorPath -Directory).Where({
-                    $_ -notin $_dirExclude -and $_.PSIsContainer -and $_.Name -match $Subdirectory;
-                })|Select-Object -ExpandProperty FullName;
+                if($ExcludedItemsFile){
+                    $_dirExclude=Get-ExcludedItems -LiteralPath $ExcludedItemsFile;
+                    if($ExcludedItemsSchema -and [Regex]::Match( $PSVersionTable.PSVersion,"^7").Success -eq "True"){
+                        $s1=Get-Content $ExcludedItemsSchema|ConvertTo-Json;
+                        if((Test-Json $s1)){
+                            if(!(Test-Json -Path $ExcludedItemsFile -SchemaFile $ExcludedItemsSchema)){
+                                $_errorMsg="Exception: JSON file does not parse according to schema or there is a problem in the syntax.";
+                                $_errorLog=@("Get-FileDetails: ExcludedItemsFile, ExcludedItemsSchema",$_errorMsg);
+                                New-ExceptionWindow -ErrorLog $_errorLog;
+                                return;
+                            }
+                        }
+                    }
+                    $_dirCollection=(Get-ChildItem $AncestorPath -Directory).Where({
+                        $_ -notin $_dirExclude.FullName -and $_.PSIsContainer -and $_.Name -match $Subdirectory})|Select-Object -ExpandProperty FullName;
+                }
+                else{
+                    $_dirCollection=(Get-ChildItem $AncestorPath -Directory).Where({$_.PSIsContainer -and $_.Name -match $Subdirectory})|Select-Object -ExpandProperty FullName;
+                }
             }
             catch{
+                $noError=$false;
                 $_errorLnNbr=$_.InvocationInfo.ScriptLineNumber;
                 $_errorMsg=[string]::Format("Exception: Directory collection loading`r`n{0}`r`nLine {1} in executing code.","$_",$_errorLnNbr);
-                $_errorLog=@("Get-FileDetails",$_errorMsg);
+                $_errorLog=@("Get-FileDetails: ExcludedItemsFile",$_errorMsg);
                 New-ExceptionWindow -ErrorLog $_errorLog;
                 return;
             }    
@@ -258,6 +313,7 @@ function Get-FileDetails{
                         }
                     }
                     catch{
+                        $noError=$false;
                         $_errorLnNbr=$_.InvocationInfo.ScriptLineNumber;
                         $_errorMsg=[string]::Format("Exception in getEachFile loop.`r`n{0}`r`nLine {1} in executing code.","$_",$_errorLnNbr);
                         $_errorLog=@("Get-FileDetails",$_errorMsg);
@@ -279,7 +335,21 @@ function Get-FileDetails{
             New-ExceptionWindow -ErrorLog $_errorLog;
         }
         if($noError){
+            try{
+                $newRoot=[InventoryRoot]::new(@($AncestorPath,$Subdirectory));
+                $newRoot.Add($newRoot);
+                Update-BaseTable -ServerName $SqlServerName -DatabaseName $SqlDatabaseName -StoredProcedure "Inventory.ManageFileDetailsRoot" -DataTable $InventoryRootCollection;
+            }
+            catch{
+                $noError=$false;
+                $_errorLnNbr=$_.InvocationInfo.ScriptLineNumber;
+                $_errorMsg=[string]::Format("Exception: New Root collection loading`r`n{0}`r`nLine {1} in executing code.","$_",$_errorLnNbr);
+                $_errorLog=@("Get-FileDetails: Upserting new root",$_errorMsg);
+                New-ExceptionWindow -ErrorLog $_errorLog;
+                return;
+            }
             Write-Host "Get-FileDetails has completed successfully.";
+            return;
         }
     }
 }

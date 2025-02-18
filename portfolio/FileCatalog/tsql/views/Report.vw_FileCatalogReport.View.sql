@@ -1,4 +1,4 @@
-CREATE VIEW Report.vw_FileCatalogReport
+CREATE VIEW [Report].[vw_FileCatalogReport]
 As
 SELECT a1.* FROM(
 	SELECT
@@ -25,25 +25,36 @@ CROSS APPLY(
 	(8,'NbrDirectoriesInventoried',CONVERT(varchar(10),a.NbrDirectoriesInventoried)),
 	(9,'SizeGBInventoried',CONVERT(varchar(10),a.SizeGBInventoried)),
 	(10,'InventoryCycleDate',FORMAT(Inventory.GetCycleDate('Inventory.FileDetails'),
-		'yyyy-MM-dd',
+		'yyyy-MM-ddThh:mm:ss',
 		'en-US'
 		)
 	)
 ) As a1(ordinal,name,value)
+UNION ALL
+SELECT ROW_NUMBER()OVER(Order By a.LastInventoryCycleDate DESC)+10 As ordinal,
+CONCAT('Root:'+CHAR(32),a.RootDirectoryName) As name,
+CONVERT(varchar(20),
+	FORMAT(
+		LastInventoryCycleDate,
+		'yyyy-MM-ddThh:mm:ss',
+		'en-US'
+	)
+) As value
+FROM Report.vw_RootLastInventoryCycleDate As a;
 GO
 
 EXEC sys.sp_addextendedproperty @name=N'Header', @value=N'{
 	"Creator": "Mark A. Dean",
-    "DateIssued": "2025-01-30T16:23:04",
+    "DateIssued": "2025-02-13T15:57:28",
     "Description": "Returns a pivoted set of Name/Value pairs from the Report.vw_FileCatalogReport table in Power BI.",
-    "Replaces": "1.5.0",
+    "Replaces": "2.0.0",
     "Identifier": "MyDatabase.Report",
     "IsReplacedBy": null,
     "Status": "Steady",
     "State": "Approved",
 	"ResourceType": "VIEW",
     "Title": "MyDatabase.Report.vw_FileCatalogReport",
-    "Version": "2.0.0",
+    "Version": "2.5.0",
     "Columns": [
 		{
             "Name": "ordinal",
