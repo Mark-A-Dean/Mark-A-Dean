@@ -30,7 +30,7 @@ A URI to be parsed. The URI is the full file path down to a specific directory.
 
 ## Example
 
-The following example shows an abbreviated version of the [File Class](https://github.com/Mark-A-Dean/BIO_Revenue_Ops/blob/main/Pages/filedetails.file.md). The class constructor method `File($p1)` sets two properties: `Ancestor1` and `Parent` by calling the function and passing in URIs for parsing. `Ancestor1` is added into the class object as a custom property.
+The following example shows an abbreviated version of the [File Class](./filedetails.file.md). The class constructor method `File($p1)` sets two properties: `Ancestor1` and `Parent` by calling the function and passing in URIs for parsing. `Ancestor1` is added into the class object as a custom property.
 
 PowerShell
 ***
