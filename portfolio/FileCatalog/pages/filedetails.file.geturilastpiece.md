@@ -4,18 +4,16 @@
 
 Namespace: FileDetails  
 Module: FileDetails.psm1  
-Source: [Get-FileDetails.ps1](./get-filedetails.md) 
+Source: [Get-FileDetails.ps1](./modules/powershell/filedetails/get-filedetails.md)
 
-Returns the last node (also _piece_ when used of a `string` value) of a Uniform Resource Identifier (URI) using a Regular Expression (regex) operation[^1].
+Calls the internal function `Get-URILastPiece` to return the last node (also _piece_ when used of a `string` value) of a Uniform Resource Identifier (URI) using a Regular Expression (regex) operation[^1].
 
 PowerShell
 ***
 ``` powershell
 [string]GetURILastPiece($q1){
-    $regexOptions=[Text.RegularExpressions.RegexOptions]"IgnoreCase, CultureInvariant";
-    $_uriPieceMatch="[^\\]+\\?$";
-    $x=([Regex]::Match($q1,$_uriPieceMatch,$regexOptions).Value).Replace("\","");
-    return $x;
+    $results=Get-URILastPiece $q1;
+    return $results;
 }
 ```
 
@@ -27,12 +25,12 @@ A URI to be parsed. The URI is the full file path down to a specific directory.
 
 |URI|Type|Description|
 |:--|:--|:--|
-|**Ancestor1**|`[System.IO.FileInfo]`|This path is supplied by the first parameter on the [Get-FileDetails](./get-filedetails.md) cmdlet.|
+|**Ancestor1**|`[System.IO.FileInfo]`|This path is supplied by the first parameter on the Get-FileDetails.ps1 cmdlet.|
 |**Parent**|`string`|Full file path to the immediate directory where the file is located.|
 
 ## Example
 
-The following example shows an abbreviated version of the [File Class](./filedetails.file.md). The class constructor method `File($p1)` sets two properties: `Ancestor1` and `Parent` by calling the function and passing in URIs for parsing. `Ancestor1` is added into the class object as a custom property.
+The following example shows an abbreviated version of the [File Class](https://github.com/Mark-A-Dean/BIO_Revenue_Ops/blob/main/Pages/filedetails.file.md). The class constructor method `File($p1)` sets two properties: `Ancestor1` and `Parent` by calling the function and passing in URIs for parsing. `Ancestor1` is added into the class object as a custom property.
 
 PowerShell
 ***
@@ -48,6 +46,20 @@ Class File{
 ```
 
 ## Remarks
+
+### Get-URILastPiece
+
+`Get-FileDetails v3.0.0` included this internal function to support similar methods in two classes. This function may be redefined as a separate cmdlet in future should wider usage support it.
+
+```powershell
+function Get-URILastPiece($q1){
+    process{
+        $regexOptions=[Text.RegularExpressions.RegexOptions]"IgnoreCase, CultureInvariant";
+        $_uriPieceMatch="[^\\]+\\?$";
+        ([Regex]::Match($q1,$_uriPieceMatch,$regexOptions).Value).Replace("\","");
+    }
+}
+```
 
 ### Pattern match
 
@@ -66,6 +78,8 @@ Regex options are parameters that control the behavior of a regular expression[^
 ## See also
 
 - [File Class](./filedetails.file.md)
+- [Get-FileDetails](./modules/powershell/filedetails/get-filedetails.md)
+- [InventoryRoot Class](./filedetails.inventoryroot.md)
 
 ## References
 [^1]: [RegexOptions Enum](https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexoptions?view=net-8.0)
