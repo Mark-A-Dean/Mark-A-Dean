@@ -1,6 +1,6 @@
 # Inventory.FileDetails (Transact-SQL)
 
-**Applies to**: ✔️ SQL Server
+**Applies to**: :heavy_check_mark: SQL Server&ensp;&ensp;:heavy_check_mark: VA Corporate Data Warehouse (CDW)
 
 Returns a row for each file processed during an inventory cycle.
 
@@ -10,7 +10,7 @@ Returns a row for each file processed during an inventory cycle.
 |\_id|int|Row identity value.|
 |Ancestor1|varchar(256)|The recognized first tier of the file directory system hierarchy. Might not be the highest directory in a path.|
 |AssignmentPriority|char(1)|A simplified ranking determined by combinations of AuditRank ranges and the active status of a file.|
-|AuditRank|int|An integer value determined by the relationships of datetime elements, the active status, file extension type, and the detectable presence of a file owner.|
+|AuditRank|int|An integer value determined by the relationships of datetime elements, the active status, file extension type, and the detectable presence of a file owner. See [Logic & interpretations](./filedetails.filecollection.auditrank.md#logic-and-interpretations).|
 |BaseName|varchar(255)|The file name without the extension or URI elements.|
 |CreationTimeUtc|datetime2(0)|The date and time when the file was created.|
 |DirectoryName|varchar(500)|The full URI to the immediate directory of the file.|
@@ -29,7 +29,7 @@ Returns a row for each file processed during an inventory cycle.
 
 ## Permissions
 
-The visibility of some data sets is limited to securables that a user either owns, or on which the user was granted some permission.
+This table is accessible only to members of the [BIO_NetworkGraph](https://app.powerbigov.us/links/NyPEhdxqg7?ctid=e95f1b23-abaf-45ee-821d-b7ab251ab3bf&pbi_source=linkShare&bookmarkGuid=3b1e3a20-9340-4ce5-b57d-9e8212e9b6d5) CDW Workgroup, VA server administrators, and OI&T CDW technical staff.
 
 ## Remarks
 
@@ -44,7 +44,7 @@ The transactional nature of this table allows that table population is completed
 ### A. Get file data arranged by the auditing attributes
 
 T-SQL
-***
+
 ```sql
 SELECT IsActive,AssignmentPriority,AuditRank,Extension,DataDisposition,Owner,
 Ancestor1,BaseName,DirectoryName,CreationTimeUtc,LastAccessTimeUtc,
@@ -58,7 +58,7 @@ ORDER BY IsActive,AssignmentPriority,AuditRank DESC;
 The following example queries the current rows (alias _a_) with a cross apply to capture all the history for the rows (alias _a1_). The results have all rows that have a difference from the current row record; this establishes a 1:M current/ historical pull.
 
 T-SQL
-***
+
 ```sql
 SELECT a._id,a.IsActive,a.AssignmentPriority,a.AuditRank,a.Ancestor1,a.Parent,
 a.BaseName,a.Extension,a.DataDisposition,a.Owner,a.CreationTimeUtc,a.LastAccessTimeUtc,
@@ -76,7 +76,7 @@ ORDER BY a._id;
 
 ## See also
 - [FileCollection Class](./filedetails.filecollection.md)
-- [Update-BaseTable](./update-basetable.md)
+- [Update-BaseTable](./filedetails/update-basetable.md)
 
 ## References
 [^1]: [Temporal tables](https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16)
