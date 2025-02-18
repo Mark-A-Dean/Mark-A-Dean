@@ -1,0 +1,252 @@
+{
+    "States": {
+        "Inactive": {
+            "is_active": 0,
+            "description": "No file datetime attributes met the age considerations that set the property as true. This is also the default value.",
+            "is_default": true,
+            "assignment_priorities": [
+                {
+                    "level": "high",
+                    "letter": "D",
+                    "description": "The audit rank is greater than `8` and the file is inactive. These rows have midlevel priority and are **T-SQL** code files at ranks greater than `14`.",
+                    "audits": [
+                        {
+                            "audit_rank": 15,
+                            "interpretation": "The SQL file was created before the 5 years prior to Today, has not been accessed or written to since its creation date, and the file owner account is not listed with the VA.",
+                            "comment": "This may be a source code file for a database object (e.g., a table, view, function, or procedure). Follow the data disposition.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 14,
+                            "interpretation": "File was not created within the last 3 years and was not accessed or modified within the past 3 years, and the file owner was not recorded by the file system.",
+                            "comment": "This old, unused file may have served as source code for a persisting database object (e.g., a table, view, function, or procedure). Retention is determined on a case by case basis.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 13,
+                            "interpretation": "File was not created within the last 3 years and was not accessed or modified within the past 3 years. The file may be a SQL file with an owner, or it is in another format and the file owner account is no longer listed with VA.",
+                            "comment": "Follow the data disposition.",
+                            "has_owner": null
+                        },
+                        {
+                            "audit_rank": 12,
+                            "interpretation": "These are primarily aging non-SQL files with file owner not recorded by the file system.",
+                            "comment": "These may be Excel workbooks or emails. Follow the data disposition.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 11,
+                            "interpretation": "These are primarily aging non-SQL files having no recorded activity since their creation.",
+                            "comment": "These files have not been used ever. Consider purging these rather than archiving unused files.",
+                            "has_owner": true
+                        },
+                        {
+                            "audit_rank": 10,
+                            "interpretation": "This case is not possible under the current business rules.",
+                            "comment": "This audit rank can only active with a change in the ranking criteria.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 9,
+                            "interpretation": "This are aging SQL files where the file owner account is no longer listed with the VA.",
+                            "comment": "Largely used, there was some activity on these files in the distant past. Archive, but retention should be determined on a case by case basis.",
+                            "has_owner": false
+                        }
+                    ]
+                },
+                {
+                    "level": "middle",
+                    "letter": "E",
+                    "description": "The audit rank is equal or greater than 5 and less than or equal to 8 and the file is inactive. These rows contain inactive files that are 5 or less years old.",
+                    "audits": [
+                        {
+                            "audit_rank": 8,
+                            "interpretation": "These are aging SQL files where no file owner account data was recorded by the file system.",
+                            "comment": "There was some activity on these files initially, but they have fallen into disuse. Follow the data disposition",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 7,
+                            "interpretation": "These are aging SQL files with a recorded file owner or non-SQL files with file owner account no longer valid with the VA.",
+                            "comment": "Mainly archives, but are rapidly aging out. Follow the data disposition.",
+                            "has_owner": null
+                        },
+                        {
+                            "audit_rank": 6,
+                            "interpretation": "These are aging non-SQL files where the file owner was not recorded by the file system.",
+                            "comment": "Follow the data disposition. These files could be supportive, but have had no recent activity.",
+                            "has_owner": null
+                        },
+                        {
+                            "audit_rank": 5,
+                            "interpretation": "These are aging non-SQL files.",
+                            "comment": "Follow the data disposition. These aged files could be supportive, but have not had any activity recorded in the past five years.",
+                            "has_owner": true
+                        }
+                    ]
+                },
+                {
+                    "level": "low",
+                    "letter": "F",
+                    "description": "The audit rank is less than 5 and the file is inactive. These inactive files have the lowest need for a review.",
+                    "audits": [
+                        {
+                            "audit_rank": 4,
+                            "interpretation": "These are old SQL files where the file owner account is no longer valid with the VA.",
+                            "comment": "Use caution if using this code as it is unsupported and likely out of date with VA data warehousing practices. Follow the data distribution.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 3,
+                            "interpretation": "These are old SQL files where no file owner account data was recorded by the file system.",
+                            "comment": "Use caution if using this code as it is unsupported and likely out of date with VA data warehousing practices. Follow the data distribution.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 2,
+                            "interpretation": "These are old non-SQL files where the file owner account is no longer valid with the VA or are simply SQL files that are aging out.",
+                            "comment": "Follow the data distribution.",
+                            "has_owner": null
+                        },
+                        {
+                            "audit_rank": 1,
+                            "interpretation": "These are old non-SQL files where no file owner account data was recorded by the file system.",
+                            "comment": "Follow the data distribution.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 0,
+                            "interpretation": "These are extremely old files with possible missing file owner data (due to server maintenance).",
+                            "comment": "These files are collecting dust. Follow the data distribution.",
+                            "has_owner": null
+                        }
+                    ]
+                }
+            ]
+        },
+        "Active": {
+            "is_active": 1,
+            "description": "1) The file CreationTimeUtc attribute value occurs within the past 3 years from the last inventory cycle date. 2) The file LastAccessTimeUtc attribute is more recent than the CreationTimeUtc attribute and three years prior to the last inventory cycle date. 3) The file LastWriteTimeUtc attribute is more recent than the CreationTimeUtc attribute and three years prior to the last inventory cycle date.",
+            "is_default": false,
+            "assignment_priorities": [
+                {
+                    "level": "high",
+                    "letter": "A",
+                    "description": "The audit rank is greater than `8` and the file is active. These rows have the highest priority and are **T-SQL** code files at ranks greater than 14.",
+                    "audits": [
+                        {
+                            "audit_rank": 15,
+                            "interpretation": "File created within the last 3 years or was accessed or modified within the past 3 years; no recorded file activity since creation; the file format is .sql; and the file owner account is no longer valid with the VA.",
+                            "comment": "Retention is determined on a case by case basis.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 14,
+                            "interpretation": "File created within the last 3 years or was accessed or modified within the past 3 years; no recorded file activity since creation; the file format is .sql; and the file owner was not recorded by the file system.",
+                            "comment": "This may be a source code file for a database object (e.g., a table, view, function, or procedure). Follow the data disposition.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 13,
+                            "interpretation": "File created within the last 3 years or was accessed or modified within the past 3 years; no recorded file activity since creation; the file format is .sql",
+                            "comment": "This file is considered to be in use.",
+                            "has_owner": true
+                        },
+                        {
+                            "audit_rank": 12,
+                            "interpretation": "File created within the last 3 years or was accessed or modified within the past 3 years; no recorded file activity since creation; and the file owner was not recorded by the file system.",
+                            "comment": "These may be Excel workbooks or emails. Follow the data disposition.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 11,
+                            "interpretation": "File created within the last 3 years or was accessed or modified within the past 3 years; and there has been no recorded file activity since creation.",
+                            "comment": "Follow the data disposition.",
+                            "has_owner": true
+                        },
+                        {
+                            "audit_rank": 10,
+                            "interpretation": "This case is not possible under the current business rules.",
+                            "comment": "This audit rank can only active with a change in the ranking criteria.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 9,
+                            "interpretation": "File created within the last 3 years or was accessed or modified within the past 3 years; file has recorded file activity; the file format is .sql; and the file owner account is no longer valid with the VA.",
+                            "comment": "May being used as a reference. Retention is determined on a case by case basis.",
+                            "has_owner": false
+                        }
+                    ]
+                },
+                {
+                    "level": "middle",
+                    "letter": "B",
+                    "description": "The audit rank is equal or greater than `5` and less than or equal to `8` and the file is active. These rows contain active files that are 5 or less years old.",
+                    "audits": [
+                        {
+                            "audit_rank": 8,
+                            "interpretation": "File was created within 5 years prior to Today, has had activity, and the file owner was not recorded by the file system.",
+                            "comment": "The data disposition should register as keep.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 7,
+                            "interpretation": "File he file was created within 5 years prior to Today, has had activity, and 1) the file is `.sql` or 2) and the file owner account is no longer valid with the VA.",
+                            "comment": "The data disposition should register as keep.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 6,
+                            "interpretation": "The file was created within 5 years prior to Today, has had activity, and the file owner was not recorded by the file system.",
+                            "comment": "Follow the data disposition.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 5,
+                            "interpretation": "The file was created within 5 years prior to Today and has had activity.",
+                            "comment": "The data disposition should register as keep.",
+                            "has_owner": true
+                        }
+                    ]
+                },
+                {
+                    "level": "low",
+                    "letter": "C",
+                    "description": "The audit rank is less than `5` and the file is active. These are active files, but are 5 years or older.",
+                    "audits": [
+                        {
+                            "audit_rank": 4,
+                            "interpretation": "The file has the .sql extension and the file owner account is no longer valid with the VA.",
+                            "comment": "Retention is determined on a case by case basis.",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 3,
+                            "interpretation": "This case is not possible under the current business rules.",
+                            "comment": "Follow the data disposition",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 2,
+                            "interpretation": "This is a rapidly aging .sql file with some recent activity (possibly as a reference).",
+                            "comment": "Retention is determined on a case by case basis.",
+                            "has_owner": true
+                        },
+                        {
+                            "audit_rank": 1,
+                            "interpretation": "This case is not possible under the current business rules.",
+                            "comment": "Follow the data disposition",
+                            "has_owner": false
+                        },
+                        {
+                            "audit_rank": 0,
+                            "interpretation": "This is an old file with some recent activity (possibly as a reference).",
+                            "comment": "Retention is determined on a case by case basis.",
+                            "has_owner": false
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
